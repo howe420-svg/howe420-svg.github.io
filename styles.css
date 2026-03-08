@@ -1,6 +1,5 @@
 :root{
-  --green:#2f6b3b; --green-2:#5a8a55; --bg:#f7f5ef; --card:#ffffff;
-  --text:#243024; --muted:#667366; --line:#dfe6dc;
+  --green:#2f6b3b; --green-2:#5a8a55; --bg:#f7f5ef; --card:#ffffff; --text:#243024; --muted:#667366; --line:#dfe6dc;
 }
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--text);background:var(--bg);line-height:1.65}
