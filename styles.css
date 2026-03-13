@@ -25,10 +25,11 @@ body{
   padding:26px 0 28px;
 }
 .brand{
-  font-size:14px;
-  opacity:.92;
-  letter-spacing:.08em;
-  margin-bottom:10px;
+  font-size:22px;
+  opacity:.96;
+  letter-spacing:.04em;
+  margin-bottom:14px;
+  font-weight:700;
 }
 h1{
   margin:0 0 16px;
