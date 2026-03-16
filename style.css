@@ -1,59 +1,117 @@
 
-:root {
-  --green-900:#244829;
-  --green-800:#2e5a27;
-  --green-700:#3d6e3c;
-  --green-100:#eef5eb;
-  --green-050:#f7faf5;
-  --text:#223024;
-  --muted:#607161;
-  --line:#dde7d8;
+:root{
+  --green:#2e5a27;
+  --green-2:#3f7a36;
+  --bg:#f6faf4;
+  --card:#ffffff;
+  --text:#243024;
+  --muted:#6a7b68;
+  --line:#d9e6d5;
 }
 *{box-sizing:border-box}
-body { margin:0; font-family: -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Microsoft JhengHei', sans-serif; background: #fdfdfd; color: var(--text); line-height: 1.8; }
-a{ color: inherit; }
-.page-wrap{max-width:1200px;margin:0 auto;padding:24px}
-.hero { background: linear-gradient(135deg, #6f8f67 0%, #2e5a27 100%); color:#fff; padding:48px 24px; }
-.hero-inner{max-width:1100px;margin:0 auto}
-.hero .eyebrow{font-size:15px;font-weight:700;opacity:.95;letter-spacing:.03em;margin-bottom:10px}
-.hero h1{font-size: clamp(34px, 6vw, 64px);line-height:1.08;margin:0 0 16px}
-.hero p{font-size: clamp(17px, 2.5vw, 24px);max-width:820px;margin:0;opacity:.98}
-.section{padding:36px 0}
-.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 10px 30px rgba(32,58,27,.06)}
-.section-kicker{color:var(--green-700);font-weight:800;font-size:14px;letter-spacing:.03em;margin-bottom:10px}
-.section-title{font-size: clamp(28px,4vw,46px);line-height:1.15;margin:0 0 14px;color:#1c271e;font-weight:900}
-.section-desc{font-size:20px;color:#374539;margin:0 0 24px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.pill{display:flex;align-items:center;justify-content:center;background:#edf3ea;border:1px solid #d7e2d1;border-radius:26px;padding:24px 18px;min-height:110px;text-align:center;font-size:20px;font-weight:900;color:var(--green-700);text-decoration:none}
-.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.about-item{background:#f8fbf6;border:1px solid #e0eadb;border-radius:18px;padding:22px}
-.about-item h3{margin:0 0 8px;font-size:21px;color:var(--green-800)}
-.about-item p{margin:0;color:#4f5f52;font-size:16px}
-.overview-lead{max-width:860px;margin:0 auto 30px;text-align:center}
-.overview-lead h1{font-size:clamp(32px,5vw,54px);line-height:1.15;margin:0 0 10px;color:#213524}
-.overview-lead p{font-size:18px;color:#556556;margin:0}
-.category-block{margin:34px 0}
-.category-title{font-size:24px;font-weight:900;color:var(--green-800);margin:0 0 14px}
-.recipe-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.recipe-card{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;text-decoration:none;box-shadow:0 8px 20px rgba(26,44,19,.04)}
-.recipe-card .cat{display:inline-block;background:#edf5eb;color:var(--green-700);padding:4px 10px;border-radius:999px;font-size:12px;font-weight:800;margin-bottom:10px}
-.recipe-card h3{margin:0 0 8px;font-size:22px;color:#233526}
-.recipe-card p{margin:0;color:#5e6f5f;font-size:15px}
-.recipe-container { max-width: 720px; margin: 28px auto; background: white; padding: 34px 28px; border-radius: 20px; box-shadow: 0 12px 34px rgba(0,0,0,0.08); border:1px solid var(--line); }
-.tag { background: var(--green-800); color: white; padding: 4px 12px; border-radius: 999px; font-size: 0.85em; display:inline-block; }
-.recipe-container h1 { color: var(--green-800); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 12px; font-size:clamp(30px,5vw,42px); }
-.recipe-section-title { font-weight: bold; color: #2e7d32; margin-top: 25px; border-left: 4px solid #81c784; padding-left: 10px; font-size:20px; }
-.ingredients-box { background: #f1f8f1; padding: 15px; border-radius: 10px; margin: 10px 0; font-size: 1em; }
-.step-item { margin: 14px 0; padding-left: 34px; position: relative; }
-.step-num { position: absolute; left: 0; top:4px; background: #e8f5e9; color: #2e7d32; width: 22px; height: 22px; border-radius: 50%; text-align: center; line-height: 22px; font-size: 0.78em; font-weight: bold; }
-.tip-box { background: #fffde7; border-radius: 10px; padding: 16px; margin-top: 25px; font-size: 0.95em; color: #555; }
-.btn-back { display: inline-block; margin-top: 30px; text-decoration: none; color: #5b6b5c; font-size: 0.95em; border:1px solid var(--line); padding:12px 16px; border-radius:12px; }
-.note { background:#fff8e8;border:1px solid #f0dfad;border-radius:14px;padding:14px 16px;color:#67542e;margin:16px 0 0 }
-code, pre {font-family: ui-monospace, SFMono-Regular, Menlo, monospace}
-@media (max-width: 640px){
-  .page-wrap{padding:18px}
-  .hero{padding:40px 20px}
-  .card{padding:22px}
-  .pill{min-height:88px;font-size:18px}
-  .recipe-container{padding:24px 18px;margin:16px}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.7;
+}
+.container{
+  max-width:920px;
+  margin:0 auto;
+  padding:24px 18px 48px;
+}
+.topbar{
+  margin-bottom:18px;
+}
+.badge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#e9f4e4;
+  color:var(--green);
+  font-size:14px;
+  font-weight:700;
+}
+h1{
+  font-size:34px;
+  line-height:1.2;
+  margin:10px 0 8px;
+}
+.subtitle{
+  color:var(--muted);
+  margin:0 0 24px;
+}
+.recipe-card{
+  border:1px solid var(--line);
+  border-left:6px solid var(--green);
+  background:var(--card);
+  border-radius:14px;
+  padding:18px;
+  margin:16px 0;
+  box-shadow:0 6px 18px rgba(46,90,39,.05);
+}
+.recipe-card h2{
+  margin:0 0 8px;
+  font-size:20px;
+}
+.recipe-card p{
+  margin:0;
+  font-size:18px;
+}
+.btn-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+.btn{
+  display:inline-block;
+  padding:12px 16px;
+  border:1px solid var(--green);
+  border-radius:12px;
+  text-decoration:none;
+  color:var(--green);
+  background:#fff;
+  font-weight:700;
+}
+.btn.primary{
+  background:var(--green);
+  color:#fff;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+}
+.veg-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  text-decoration:none;
+  color:inherit;
+  box-shadow:0 6px 18px rgba(46,90,39,.04);
+}
+.veg-card:hover{
+  border-color:#c4d8be;
+  transform:translateY(-1px);
+}
+.veg-card h3{
+  margin:8px 0 6px;
+  font-size:20px;
+}
+.veg-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+}
+.section-title{
+  margin:30px 0 12px;
+  font-size:24px;
+}
+footer{
+  margin-top:40px;
+  color:var(--muted);
+  font-size:14px;
 }
