@@ -1,23 +1,34 @@
-佳雨農場蔬菜料理頁面包
+佳雨農場網站更新包（recipes_full 版本）
 
-內容：
-- vegetables.html：蔬菜料理總覽頁
-- style.css：共用樣式
-- 42 個蔬菜內頁 html
-- index.html：整合示意首頁（不是用來覆蓋你正式首頁的必要檔案）
+這一包已經幫你整理成資料夾結構：
 
-你網站要做的事：
-1. 把整個資料夾內檔案上傳到網站同一層目錄
-2. 在原本網站導覽或按鈕加上一個連結：
-   vegetables.html
-3. 若你已有首頁 index.html，請不要直接覆蓋，除非你就是要用我附的示意版本
+1. recipes_full/
+   放 42 個蔬菜詳細做法頁面
 
-建議：
-- 手機版可直接使用
-- QR code 建議指向 vegetables.html 或各蔬菜個別頁面
+2. vegetables.html
+   蔬菜總覽頁，裡面的連結已經指向 recipes_full/ 資料夾
 
+3. homepage-section-restored.html
+   把原本首頁上方介紹改回品牌介紹，並加入「認識我們」區塊
 
-新增檔案說明:
-- homepage-section.html：可直接貼進你原本首頁的區塊
-- homepage-demo.html：完整示意首頁，可先預覽效果
-- generate_pages.py：你原始提供的產頁腳本備份
+4. about-us-section.html
+   單獨的「認識我們」區塊，如果你只想補這一段可直接貼
+
+5. homepage-demo-restored.html
+   示意版首頁
+
+6. style.css
+   共用樣式
+
+建議上傳方式：
+- 把 recipes_full 整個資料夾上傳到網站
+- 把 vegetables.html 與 style.css 一起放到網站根目錄
+- 把 homepage-section-restored.html 內容貼回你原本首頁適合的位置
+
+如果你的首頁是 index.html，而且已經有原本站內容：
+- 不要直接覆蓋原本 index.html
+- 先用 homepage-section-restored.html 的內容，手動貼回首頁上方
+
+連結路徑：
+- 若 vegetables.html 跟首頁同層，按鈕直接用 href="vegetables.html"
+- 若不是同層，請自行修改相對路徑
