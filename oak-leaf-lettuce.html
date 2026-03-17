@@ -1,51 +1,88 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>有機鹿角萵苣 完整做法 - 佳雨農場</title>
 <style>
-body { font-family: 'PingFang TC', sans-serif; background: #f6f7f4; padding: 20px; color: #333; line-height: 1.8; }
-.recipe-container { max-width: 650px; margin: 0 auto; background: white; padding: 40px; border-radius: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.05); }
-.tag { display:inline-block; background: #2e5a27; color: white; padding: 6px 16px; border-radius: 999px; font-size: 0.8em; }
-h1 { color: #2e5a27; border-bottom: 1px solid #e8ece6; padding-bottom: 10px; margin-top: 24px; font-size: 48px; line-height:1.15; }
-.method-block { margin-top: 28px; }
-.method-title { font-weight: 700; color:#2e5a27; font-size: 28px; margin: 22px 0 10px; }
-.section-title { font-weight: bold; color: #2e7d32; margin-top: 25px; border-left: 6px solid #81c784; padding-left: 12px; font-size: 20px; }
-.ingredients-box { background: #f1f5f0; padding: 18px; border-radius: 10px; margin: 14px 0; font-size: 0.95em; }
-.step-item { margin: 16px 0; padding-left: 40px; position: relative; font-size: 1em; }
-.step-num { position: absolute; left: 0; top: 2px; background: #e8f5e9; color: #2e7d32; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 0.95em; font-weight: bold; }
-.tip-box { background: #fff8dd; border-radius: 10px; padding: 18px; margin-top: 22px; font-size: 0.95em; color: #555; }
-.btn-back { display: block; text-align: center; margin-top: 34px; text-decoration: none; color: #999; font-size: 0.95em; }
-hr.sep { border:0; border-top:1px solid #ecefe9; margin: 30px 0; }
-@media (max-width: 680px) {
- body { padding: 14px; }
- .recipe-container { padding: 28px 20px; border-radius: 24px; }
- h1 { font-size: 34px; }
- .method-title { font-size: 22px; }
+:root{--bg:#f4f5f1;--card:#fff;--line:#d8e2d4;--text:#223126;--muted:#6d7c71;--green:#2f6a35;--soft:#eef4ec;--accent:#fff9df;--shadow:0 18px 40px rgba(31,61,28,.08)}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#f4f5f1 0,#eef1ea 100%);color:var(--text);font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.75}
+.wrap{max-width:900px;margin:0 auto;padding:18px 14px 42px}
+.hero{background:linear-gradient(135deg,#7bae75 0%,#2e6a34 100%);color:#fff;border-radius:34px;padding:26px 20px 24px;box-shadow:var(--shadow)}
+.hero .tag{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);font-size:14px;font-weight:900}
+.hero h1{margin:16px 0 10px;font-size:clamp(38px,8vw,64px);line-height:1.06;letter-spacing:1px}
+.hero p{margin:0;color:rgba(255,255,255,.92);font-size:clamp(17px,3.6vw,22px)}
+.main-card{margin-top:18px;background:rgba(255,255,255,.86);border:1px solid rgba(216,226,212,.95);backdrop-filter: blur(8px);border-radius:30px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
+.method-card{background:linear-gradient(180deg,#fff 0%,#fbfcfa 100%);border:1px solid var(--line);border-radius:26px;padding:18px;margin-bottom:18px;box-shadow:0 10px 24px rgba(36,62,32,.04)}
+.method-top{margin-bottom:14px}
+.method-badge{display:inline-block;padding:7px 12px;border-radius:999px;background:var(--soft);color:var(--green);font-size:13px;font-weight:900;margin-bottom:10px}
+.method-top h2{margin:0;font-size:clamp(26px,5vw,36px);line-height:1.18;color:var(--green)}
+.info-box{margin-top:14px}
+.section-head{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:900;color:var(--green);margin-bottom:10px}
+.section-head:before{content:'';display:inline-block;width:6px;height:28px;border-radius:99px;background:#7ec785}
+.ingredients{background:var(--soft);border-radius:18px;padding:18px;font-size:20px;line-height:1.75}
+.steps{display:grid;gap:12px}
+.step{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:flex-start;padding:4px 0}
+.step span{display:flex;justify-content:center;align-items:center;width:36px;height:36px;border-radius:999px;background:#e8f3e6;color:var(--green);font-weight:900;font-size:18px}
+.step p{margin:0;font-size:22px;line-height:1.65}
+.tip{margin-top:18px;background:var(--accent);border-radius:18px;padding:18px}
+.tip strong{display:block;font-size:18px;color:#5c5a34;margin-bottom:6px}
+.tip p{margin:0;font-size:21px;color:#54544a}
+.nav{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+.nav a{display:inline-block;padding:14px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--green);text-decoration:none;font-weight:900}
+@media (max-width:680px){
+  .hero{border-radius:26px;padding:22px 16px 20px}
+  .main-card{padding:14px;border-radius:24px}
+  .method-card{padding:16px;border-radius:22px}
+  .ingredients{font-size:18px}
+  .step p{font-size:18px}
+  .tip p{font-size:18px}
 }
 </style>
 </head>
 <body>
-<div class="recipe-container">
-<span class="tag">生食沙拉系列</span>
-<h1>有機鹿角萵苣</h1>
-<section class="method-block">
-<div class="method-title">料理方式 1｜和風沙拉</div>
-<div class="section-title">準備食材</div>
-<div class="ingredients-box">鹿角萵苣 150g、和風醬 2 大匙、玉米粒少許</div>
-<div class="section-title">料理步驟</div>
-<div class="steps-container"><div class="step-item"><span class="step-num">1</span>蔬菜洗淨瀝乾，撕成適口大小。</div><div class="step-item"><span class="step-num">2</span>加入玉米粒一起拌勻。</div><div class="step-item"><span class="step-num">3</span>淋上和風醬即可。</div></div>
-<div class="tip-box"><strong>💡 佳雨農場小撇步：</strong><br>葉菜一定要瀝乾，醬汁才不會被稀釋。</div>
-</section>
-<hr class="sep">
-<section class="method-block">
-<div class="method-title">料理方式 2｜凱薩輕食</div>
-<div class="section-title">準備食材</div>
-<div class="ingredients-box">鹿角萵苣 150g、水煮蛋 1 顆、麵包丁少許、凱薩醬少許</div>
-<div class="section-title">料理步驟</div>
-<div class="steps-container"><div class="step-item"><span class="step-num">1</span>葉菜洗淨後冰鎮 5 分鐘。</div><div class="step-item"><span class="step-num">2</span>搭配水煮蛋與麵包丁擺盤。</div><div class="step-item"><span class="step-num">3</span>淋上凱薩醬即可享用。</div></div>
-<div class="tip-box"><strong>💡 佳雨農場小撇步：</strong><br>先冰一下，口感會更脆。</div>
-</section>
-<a href="vegetables.html" class="btn-back">← 返回蔬菜總覽</a>
-</div>
-</body></html>
+  <main class="wrap">
+    <section class="hero">
+      <span class="tag">生食沙拉系列</span>
+      <h1>有機鹿角萵苣</h1>
+      <p>今天這包菜，直接照著做就很好吃。下面整理成兩種簡單又實用的料理方式。</p>
+    </section>
+    <section class="main-card">
+      <section class="method-card">
+          <div class="method-top">
+            <div class="method-badge">做法 1</div>
+            <h2>料理方式 1｜和風沙拉</h2>
+          </div>
+          <div class="info-box">
+            <div class="section-head">準備食材</div>
+            <div class="ingredients">鹿角萵苣 150g、和風醬 2 大匙、玉米粒少許</div>
+          </div>
+          <div class="info-box">
+            <div class="section-head">料理步驟</div>
+            <div class="steps"><div class="step"><span>1</span><p>蔬菜洗淨瀝乾，撕成適口大小。</p></div><div class="step"><span>2</span><p>加入玉米粒一起拌勻。</p></div><div class="step"><span>3</span><p>淋上和風醬即可。</p></div></div>
+          </div>
+          <div class="tip"><strong>佳雨農場小撇步</strong><p>葉菜一定要瀝乾，醬汁才不會被稀釋。</p></div>
+        </section><section class="method-card">
+          <div class="method-top">
+            <div class="method-badge">做法 2</div>
+            <h2>料理方式 2｜凱薩輕食</h2>
+          </div>
+          <div class="info-box">
+            <div class="section-head">準備食材</div>
+            <div class="ingredients">鹿角萵苣 150g、水煮蛋 1 顆、麵包丁少許、凱薩醬少許</div>
+          </div>
+          <div class="info-box">
+            <div class="section-head">料理步驟</div>
+            <div class="steps"><div class="step"><span>1</span><p>葉菜洗淨後冰鎮 5 分鐘。</p></div><div class="step"><span>2</span><p>搭配水煮蛋與麵包丁擺盤。</p></div><div class="step"><span>3</span><p>淋上凱薩醬即可享用。</p></div></div>
+          </div>
+          <div class="tip"><strong>佳雨農場小撇步</strong><p>先冰一下，口感會更脆。</p></div>
+        </section>
+      <div class="nav">
+        <a href="vegetables.html">← 返回蔬菜總覽</a>
+        <a href="index.html">回首頁</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

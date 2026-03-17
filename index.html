@@ -3,262 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>佳雨農場｜這包菜，今晚這樣煮最好吃</title>
-<meta name="description" content="佳雨農場有機蔬菜料理建議，手機也好看，快速找到每一包菜最適合的做法。">
+<title>佳雨農場｜今天這包菜，這樣煮最好吃</title>
+<meta name="description" content="佳雨農場有機蔬菜掃碼首頁，快速查看料理建議、保存方式與蔬菜特色。">
 <style>
 :root{
-  --bg:#f4f5f1;
-  --card:#ffffff;
-  --green:#2f6b2f;
-  --green-dark:#245824;
-  --green-soft:#eef4ec;
-  --line:#d8e2d4;
-  --text:#203126;
-  --muted:#68756b;
+  --bg:#f3f4ef; --card:#ffffff; --line:#d8e2d4; --text:#1e2d22; --muted:#6f7d72;
+  --green:#2d6a34; --green2:#5d9158; --soft:#eef4ec; --shadow:0 20px 48px rgba(29,63,31,.10);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
-  line-height:1.75;
+body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45%,#eef1eb 100%);color:var(--text);font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.75}
+.wrap{max-width:1120px;margin:0 auto;padding:18px 18px 50px}
+.hero{background:linear-gradient(135deg,#7eb077 0%,#2d6a34 100%);border-radius:44px;color:#fff;padding:34px 24px 30px;box-shadow:var(--shadow)}
+.hero-inner{max-width:920px;margin:0 auto}
+.brand{font-size:clamp(20px,2.4vw,34px);letter-spacing:.8px;opacity:.97}
+.hero h1{margin:18px 0 0;font-size:clamp(58px,8vw,118px);line-height:1.02;letter-spacing:1px}
+.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;margin-top:22px}
+.card{background:rgba(255,255,255,.86);backdrop-filter: blur(8px);border:1px solid rgba(216,226,212,.95);border-radius:30px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
+.kicker{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--soft);color:var(--green);font-size:14px;font-weight:900;margin-bottom:14px}
+.big-title{margin:0 0 10px;font-size:clamp(30px,4vw,46px);line-height:1.18;font-weight:900}
+.lead{margin:0;color:var(--muted);font-size:clamp(18px,2.2vw,22px)}
+.action-grid{display:grid;gap:14px;margin-top:22px}
+.action{display:flex;justify-content:center;align-items:center;min-height:92px;padding:18px 20px;border-radius:22px;background:linear-gradient(180deg,#f5f9f4 0%,#eef4ec 100%);border:1px solid var(--line);color:var(--green);text-decoration:none;font-size:clamp(22px,2.6vw,30px);font-weight:900}
+.image-card img{width:100%;display:block;border-radius:28px;object-fit:cover;box-shadow:0 16px 40px rgba(45,106,52,.10)}
+.image-card p{margin:14px 4px 0;color:var(--muted);font-size:18px;font-weight:700}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.mini{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 8px 22px rgba(0,0,0,.03)}
+.mini h3{margin:10px 0 8px;font-size:28px;line-height:1.18}
+.mini p{margin:0;color:var(--muted);font-size:17px}
+.mini .num{display:inline-flex;justify-content:center;align-items:center;width:38px;height:38px;border-radius:12px;background:var(--soft);color:var(--green);font-weight:900}
+.section-title{margin:0 0 14px;font-size:clamp(26px,3vw,38px);line-height:1.15}
+.note-list{display:grid;gap:14px}
+.note-item{padding:16px 18px;border-radius:18px;background:#fafcf9;border:1px solid var(--line)}
+.note-item strong{display:block;color:var(--green);font-size:20px;margin-bottom:4px}
+.quick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.quick-link{display:block;padding:18px 20px;border-radius:20px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--text)}
+.quick-link span{display:block;color:var(--muted);font-size:13px;font-weight:700;margin-bottom:6px}
+.quick-link strong{font-size:24px;line-height:1.2}
+.footer-link{text-align:center;margin-top:26px}
+.footer-link a{display:inline-block;padding:14px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--green);text-decoration:none;font-weight:900}
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr}
+  .mini-grid{grid-template-columns:1fr}
+  .quick-grid{grid-template-columns:1fr}
 }
-.wrap{
-  max-width:860px;
-  margin:0 auto;
-  padding:0 18px 42px;
-}
-.hero{
-  background:linear-gradient(180deg,#4f9152 0%, #2a6a31 100%);
-  color:#fff;
-  padding:54px 28px 40px;
-  border-bottom-left-radius:28px;
-  border-bottom-right-radius:28px;
-  box-shadow:0 10px 30px rgba(34,74,31,.14);
-}
-.hero-inner{
-  max-width:860px;
-  margin:0 auto;
-}
-.brand{
-  font-size:18px;
-  opacity:.95;
-  letter-spacing:.2px;
-}
-.hero h1{
-  margin:14px 0 14px;
-  font-size: clamp(38px, 8vw, 62px);
-  line-height:1.08;
-  letter-spacing:1px;
-}
-.hero p{
-  margin:0;
-  font-size: clamp(18px, 3.8vw, 24px);
-  color:rgba(255,255,255,.93);
-  max-width:760px;
-}
-.section-card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:28px;
-  padding:26px 18px;
-  margin-top:22px;
-  box-shadow:0 4px 18px rgba(0,0,0,.03);
-}
-.section-card.tight{padding:18px}
-.kicker{
-  color:var(--green);
-  font-weight:800;
-  font-size:18px;
-  margin-bottom:8px;
-}
-.big-title{
-  font-size: clamp(24px, 6vw, 36px);
-  line-height:1.25;
-  margin:0 0 10px;
-  font-weight:900;
-}
-.lead{
-  font-size: clamp(17px, 3.8vw, 22px);
-  color:var(--text);
-  margin:0 0 20px;
-  font-weight:700;
-}
-.btn-grid{
-  display:grid;
-  gap:14px;
-  margin-top:12px;
-}
-.btn-box{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:92px;
-  padding:18px;
-  background:var(--green-soft);
-  color:var(--green);
-  text-decoration:none;
-  border:2px solid #d7e4d3;
-  border-radius:22px;
-  font-size: clamp(20px, 5vw, 28px);
-  font-weight:900;
-}
-.image-card img{
-  width:100%;
-  display:block;
-  border-radius:26px;
-  object-fit:cover;
-}
-.caption{
-  margin:16px 4px 0;
-  color:var(--muted);
-  font-size: clamp(16px, 3.6vw, 19px);
-  font-weight:700;
-}
-.learn-box{
-  border:2px dashed #d5dfcf;
-  background:#fbfcfa;
-}
-.learn-box .small{
-  color:var(--green);
-  font-weight:800;
-  font-size:18px;
-}
-.learn-box h3{
-  margin:6px 0 10px;
-  font-size: clamp(24px, 6vw, 38px);
-  line-height:1.18;
-}
-.learn-box p{
-  margin:0 0 12px;
-  font-size: clamp(18px, 3.8vw, 22px);
-  color:var(--text);
-  font-weight:700;
-}
-.learn-box .sub{
-  color:#8a938c;
-  font-style:italic;
-  font-weight:700;
-  margin-top:8px;
-}
-.quick-links{
-  display:grid;
-  gap:12px;
-}
-.quick-links a{
-  display:block;
-  padding:18px 20px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:#fff;
-  color:var(--text);
-  text-decoration:none;
-  font-size:22px;
-  font-weight:900;
-}
-.quick-links span{
-  display:block;
-  color:var(--muted);
-  font-size:14px;
-  font-weight:600;
-  margin-bottom:4px;
-}
-.note{
-  color:var(--muted);
-  font-size:16px;
-  margin-top:10px;
-}
-.footer-link{
-  text-align:center;
-  margin-top:26px;
-}
-.footer-link a{
-  display:inline-block;
-  padding:14px 22px;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:999px;
-  text-decoration:none;
-  color:var(--green-dark);
-  font-weight:900;
-}
-@media (min-width: 900px){
-  .wrap{padding-top:18px}
+@media (max-width:680px){
+  .wrap{padding:14px 14px 40px}
+  .hero{border-radius:30px;padding:26px 18px 22px}
+  .brand{font-size:16px}
+  .hero h1{font-size:clamp(44px,15vw,76px)}
+  .card{padding:20px;border-radius:24px}
+  .action{min-height:82px;font-size:clamp(20px,6vw,28px)}
 }
 </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="brand">佳雨農場 Jiayu Farm</div>
-      <h1>這包菜，今晚這樣煮最好吃</h1>
-      <p>簡單做、好上手，也更不浪費這包菜的新鮮口感。</p>
-    </div>
-  </header>
-
   <main class="wrap">
-    <section class="section-card">
-      <div class="kicker">掃碼頁首頁</div>
-      <h2 class="big-title">這包菜，今晚這樣煮最好吃</h2>
-      <p class="lead">簡單做、好上手，也更不浪費這包菜的口感。</p>
-
-      <div class="btn-grid">
-        <a class="btn-box" href="vegetables.html">料理建議</a>
-        <a class="btn-box" href="#save">保存方式</a>
-        <a class="btn-box" href="#features">這包菜特色</a>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="brand">佳雨農場｜安心有機，日常好煮</div>
+        <h1>今天這包菜，這樣<br>煮最好吃</h1>
       </div>
     </section>
 
-    <section class="section-card image-card">
-      <img src="homepage-kitchen-vegetables.jpg" alt="佳雨農場蔬菜料理示意圖">
-      <p class="caption">像走進一個會輕聲告訴你：這道菜怎麼煮會更好吃的廚房。</p>
-    </section>
-
-    <section class="section-card learn-box">
-      <div class="small">這次學一道</div>
-      <h3>青江菜先下梗再下葉</h3>
-      <p>青江菜先下梗再下葉，口感會更脆，也比較不容易炒過頭。</p>
-      <div class="sub">下次掃看看，我們會不定期更新新的料理靈感。</div>
-    </section>
-
-    <section class="section-card" id="save">
-      <div class="kicker">保存方式</div>
-      <h2 class="big-title">先別急著洗，冷藏更能留住口感</h2>
-      <p class="lead">葉菜先用袋子或保鮮盒冷藏保存，料理前再洗，通常會比較耐放。</p>
-      <div class="quick-links">
-        <a href="vegetables.html"><span>保存小提醒 01</span>先不洗，避免葉面太濕</a>
-        <a href="vegetables.html"><span>保存小提醒 02</span>冷藏時可墊一張紙巾吸水氣</a>
-        <a href="vegetables.html"><span>保存小提醒 03</span>較嫩葉菜建議 2～3 天內先吃</a>
+    <section class="grid">
+      <div class="card">
+        <span class="kicker">掃碼頁首頁</span>
+        <h2 class="big-title">每一包佳雨農場的菜，都幫你整理好了</h2>
+        <p class="lead">點進去直接看兩種料理方式，少想一點，晚餐更快上桌。</p>
+        <div class="action-grid">
+          <a class="action" href="vegetables.html">料理建議</a>
+          <a class="action" href="#save">保存方式</a>
+          <a class="action" href="#features">這包菜特色</a>
+        </div>
+      </div>
+      <div class="card image-card">
+        <img src="homepage-kitchen-vegetables.jpg" alt="佳雨農場蔬菜料理示意圖">
+        <p>像走進一個會輕聲告訴你：這道菜怎麼煮會更好吃的廚房。</p>
       </div>
     </section>
 
-    <section class="section-card" id="features">
-      <div class="kicker">這包菜特色</div>
-      <h2 class="big-title">新鮮、單純，適合家裡日常快煮</h2>
-      <p class="lead">佳雨農場把常見蔬菜整理成容易查找的料理頁，讓你打開手機就知道今晚怎麼煮。</p>
-      <div class="quick-links">
-        <a href="vegetables.html"><span>料理頁入口</span>依蔬菜名稱直接找做法</a>
-        <a href="vegetables.html"><span>每道菜都有</span>兩個料理方式＋食材＋三步驟</a>
-        <a href="vegetables.html"><span>手機閱讀優先</span>點進去就能直接開始煮</a>
+    <section class="mini-grid">
+      <div class="mini">
+        <span class="num">1</span>
+        <h3>先選你的菜</h3>
+        <p>把常見葉菜分門別類，快速找到今天手上的那一包。</p>
       </div>
-      <p class="note">已整理成單層頁面，使用者只要掃碼進來，就能直接找到對應蔬菜。</p>
-    </section>
-
-    <section class="section-card tight">
-      <div class="kicker">先挑你的菜</div>
-      <div class="quick-links">
-        <a href="butter-cabbage.html"><span>家常快炒</span>有機奶油白菜</a>
-        <a href="komatsuna.html"><span>家常快炒</span>有機小松菜</a>
-        <a href="bok-choy.html"><span>家常快炒</span>有機青江菜</a>
-        <a href="qingsong-cai.html"><span>特色葉菜</span>有機青松菜</a>
+      <div class="mini">
+        <span class="num">2</span>
+        <h3>直接照著做</h3>
+        <p>每道菜都有兩個料理方式，附食材、步驟與佳雨農場小撇步。</p>
+      </div>
+      <div class="mini">
+        <span class="num">3</span>
+        <h3>煮得更剛好</h3>
+        <p>不是複雜食譜，而是最適合日常、最好成功的做法整理。</p>
       </div>
     </section>
 
-    <div class="footer-link">
-      <a href="vegetables.html">進入完整蔬菜料理總覽</a>
-    </div>
+    <section class="grid" style="margin-top:22px">
+      <div class="card" id="save">
+        <h2 class="section-title">保存方式</h2>
+        <div class="note-list">
+          <div class="note-item"><strong>收到後先冷藏</strong>葉菜類建議盡快放入冰箱冷藏，保持脆度與水分。</div>
+          <div class="note-item"><strong>不要先洗再冰</strong>表面水氣容易加速腐敗，建議料理前再清洗。</div>
+          <div class="note-item"><strong>2～4 天內最好吃</strong>越新鮮越甜，前幾天吃口感最佳。</div>
+        </div>
+      </div>
+      <div class="card" id="features">
+        <h2 class="section-title">這包菜特色</h2>
+        <div class="note-list">
+          <div class="note-item"><strong>安心有機</strong>從農場到餐桌，吃得單純也吃得放心。</div>
+          <div class="note-item"><strong>日常好煮</strong>多數品項都能快速快炒、煮湯或簡單變化。</div>
+          <div class="note-item"><strong>當季新鮮</strong>新鮮蔬菜不需要太複雜，方法對了就很好吃。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:22px">
+      <span class="kicker">快速入口</span>
+      <h2 class="section-title">今晚先從這裡開始</h2>
+      <div class="quick-grid">
+        <a class="quick-link" href="vegetables.html"><span>全部蔬菜</span><strong>查看料理建議總覽</strong></a>
+        <a class="quick-link" href="bok-choy.html"><span>人氣常見</span><strong>有機青江菜</strong></a>
+        <a class="quick-link" href="butter-cabbage.html"><span>家常快炒</span><strong>有機奶油白菜</strong></a>
+        <a class="quick-link" href="qingsong-cai.html"><span>特色葉菜</span><strong>有機青松菜</strong></a>
+      </div>
+    </section>
   </main>
 </body>
 </html>

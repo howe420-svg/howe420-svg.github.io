@@ -1,31 +1,264 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>蔬菜料理建議 - 佳雨農場</title>
+<meta name="description" content="佳雨農場有機蔬菜料理建議，快速找到每一包菜最適合的兩種做法。">
 <style>
-body{font-family:'PingFang TC',sans-serif;background:#f6f7f4;color:#233126;line-height:1.7;margin:0}
-.wrap{max-width:1100px;margin:0 auto;padding:24px}
-.hero{background:linear-gradient(135deg,#6f9967,#2f5a30);color:#fff;border-radius:24px;padding:28px}
-.hero h1{font-size:40px;line-height:1.2;margin:10px 0 12px}
-.hero p{font-size:18px;max-width:760px}
-.cat{margin-top:34px}
-.cat h2{font-size:28px;margin-bottom:8px;color:#233126}
-.desc{color:#5f6f63;margin-bottom:14px}
-.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.item{display:block;background:#fff;border:1px solid #dfe6da;border-radius:14px;padding:16px;text-decoration:none;color:#233126}
-.item span{display:block;font-size:13px;color:#6c7a6f;margin-bottom:6px}
-.item strong{font-size:20px}
-@media (max-width: 680px){ .hero h1{font-size:32px} .hero p{font-size:16px} }
+:root{
+  --bg:#f5f5f1; --card:#fff; --line:#d9e3d3; --text:#1e2d22; --muted:#708074;
+  --green:#2e6a34; --green2:#5d9158; --soft:#f3f7f1; --shadow:0 18px 40px rgba(28,61,30,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#f4f5f1 0,#eef1eb 100%);color:var(--text);font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.7}
+.wrap{max-width:1120px;margin:0 auto;padding:24px 18px 48px}
+.hero{background:linear-gradient(135deg,#7daf76 0%,#2c6a34 100%);border-radius:38px;color:#fff;padding:34px 26px;box-shadow:var(--shadow)}
+.hero .brand{font-size:18px;opacity:.95;letter-spacing:.5px}
+.hero h1{margin:16px 0 14px;font-size:clamp(42px,7vw,76px);line-height:1.04;letter-spacing:1px}
+.hero p{margin:0;max-width:760px;font-size:clamp(18px,2.8vw,24px);color:rgba(255,255,255,.94)}
+.topbar{display:flex;gap:12px;flex-wrap:wrap;margin:20px 2px 8px}
+.pill{display:inline-flex;align-items:center;padding:10px 16px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--green);text-decoration:none;font-weight:900}
+.cat-section{margin-top:28px;background:rgba(255,255,255,.72);border:1px solid rgba(217,227,211,.8);backdrop-filter: blur(6px);border-radius:28px;padding:24px;box-shadow:0 8px 24px rgba(0,0,0,.03)}
+.cat-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:18px}
+.cat-no{display:flex;justify-content:center;align-items:center;width:56px;height:56px;border-radius:18px;background:var(--soft);color:var(--green);font-weight:900;font-size:22px;flex:0 0 auto}
+.cat-head h2{margin:2px 0 4px;font-size:clamp(30px,4vw,38px);line-height:1.15}
+.cat-head p{margin:0;color:var(--muted);font-size:17px}
+.veg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.veg-card{display:block;padding:18px 18px 16px;border-radius:22px;background:linear-gradient(180deg,#fff 0%,#fbfcfa 100%);border:1px solid var(--line);text-decoration:none;color:var(--text);box-shadow:0 10px 24px rgba(36,62,32,.04);transition:transform .18s ease, box-shadow .18s ease}
+.veg-card:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(36,62,32,.08)}
+.veg-label{display:inline-block;margin-bottom:10px;padding:6px 10px;border-radius:999px;background:var(--soft);color:var(--green);font-size:13px;font-weight:800}
+.veg-card strong{display:block;font-size:30px;line-height:1.15;margin-bottom:10px;letter-spacing:.5px}
+.veg-card em{display:block;color:var(--muted);font-style:normal;font-weight:700}
+.footer-link{text-align:center;margin-top:30px}
+.footer-link a{display:inline-block;padding:14px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--green);text-decoration:none;font-weight:900}
+@media (max-width:680px){
+  .wrap{padding:18px 14px 38px}
+  .hero{border-radius:28px;padding:26px 18px 22px}
+  .hero .brand{font-size:16px}
+  .cat-section{padding:18px;border-radius:24px}
+  .cat-no{width:48px;height:48px;font-size:18px;border-radius:14px}
+  .veg-card strong{font-size:24px}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-<section class="hero">
-<div>佳雨農場｜安心有機，日常好煮</div>
-<h1>今天這包菜，這樣煮最好吃</h1>
-<p>把最常見的葉菜分成四大類，點進去就能看到兩種料理方式、完整食材、三步驟做法與小撇步。</p>
-</section>
-<section class="cat"><h2>家常快炒</h2><p class="desc">最常見、最好上手，適合日常晚餐快速上桌。</p><div class="list"><a class="item" href="butter-cabbage.html"><span>家常快炒</span><strong>有機奶油白菜</strong></a><a class="item" href="komatsuna.html"><span>家常快炒</span><strong>有機小松菜</strong></a><a class="item" href="baby-bok-choy.html"><span>家常快炒</span><strong>有機小白菜</strong></a><a class="item" href="baby-mustard.html"><span>家常快炒</span><strong>有機小芥菜</strong></a><a class="item" href="you-cai.html"><span>家常快炒</span><strong>有機油菜</strong></a><a class="item" href="water-spinach.html"><span>家常快炒</span><strong>有機空心菜</strong></a><a class="item" href="gai-lan.html"><span>家常快炒</span><strong>有機芥藍菜</strong></a><a class="item" href="tongho.html"><span>家常快炒</span><strong>有機茼蒿</strong></a><a class="item" href="bok-choy.html"><span>家常快炒</span><strong>有機青江菜</strong></a><a class="item" href="qing-you-cai.html"><span>家常快炒</span><strong>有機青油菜</strong></a><a class="item" href="black-leaf-cabbage.html"><span>家常快炒</span><strong>有機黑葉白菜</strong></a><a class="item" href="a-cai.html"><span>家常快炒</span><strong>有機Ａ菜</strong></a></div></section><section class="cat"><h2>煮湯火鍋</h2><p class="desc">適合清湯、鍋物、溫潤暖胃的做法。</p><div class="list"><a class="item" href="mizuna.html"><span>煮湯火鍋</span><strong>有機京都水菜</strong></a><a class="item" href="mountain-spinach.html"><span>煮湯火鍋</span><strong>有機山菠菜</strong></a><a class="item" href="swiss-chard.html"><span>煮湯火鍋</span><strong>有機瑞士菠菜</strong></a><a class="item" href="japanese-tongho.html"><span>煮湯火鍋</span><strong>有機日本茼蒿</strong></a><a class="item" href="sweet-choy-sum.html"><span>煮湯火鍋</span><strong>有機甜菜心</strong></a><a class="item" href="beet-greens.html"><span>煮湯火鍋</span><strong>有機甜菜葉</strong></a><a class="item" href="spinach.html"><span>煮湯火鍋</span><strong>有機菠菜</strong></a><a class="item" href="radish-leaf.html"><span>煮湯火鍋</span><strong>有機葉蘿蔔</strong></a></div></section><section class="cat"><h2>生食沙拉</h2><p class="desc">清爽脆嫩，適合涼拌、沙拉與輕食。</p><div class="list"><a class="item" href="butter-lettuce.html"><span>生食沙拉</span><strong>有機奶油萵苣</strong></a><a class="item" href="sweet-romaine.html"><span>生食沙拉</span><strong>有機甜蘿蔓</strong></a><a class="item" href="fushan-lettuce.html"><span>生食沙拉</span><strong>有機福山萵苣</strong></a><a class="item" href="emerald-lettuce.html"><span>生食沙拉</span><strong>有機綠寶石萵苣</strong></a><a class="item" href="chicory.html"><span>生食沙拉</span><strong>有機菊苣</strong></a><a class="item" href="romaine.html"><span>生食沙拉</span><strong>有機蘿蔓</strong></a><a class="item" href="oak-leaf-lettuce.html"><span>生食沙拉</span><strong>有機鹿角萵苣</strong></a></div></section><section class="cat"><h2>特色葉菜</h2><p class="desc">有風味、有記憶點，能做出更有特色的一餐。</p><div class="list"><a class="item" href="you-ai-cabbage.html"><span>特色葉菜</span><strong>有機優愛白菜</strong></a><a class="item" href="qianbao-cai.html"><span>特色葉菜</span><strong>有機千寶菜</strong></a><a class="item" href="weimei-cai.html"><span>特色葉菜</span><strong>有機味美菜</strong></a><a class="item" href="tagu-cai.html"><span>特色葉菜</span><strong>有機塔菇菜</strong></a><a class="item" href="hiroshima-greens.html"><span>特色葉菜</span><strong>有機廣島菜</strong></a><a class="item" href="kale.html"><span>特色葉菜</span><strong>有機羽衣甘藍</strong></a><a class="item" href="lotus-cabbage.html"><span>特色葉菜</span><strong>有機荷葉白菜</strong></a><a class="item" href="amaranth.html"><span>特色葉菜</span><strong>有機莧菜</strong></a><a class="item" href="michelle-cabbage.html"><span>特色葉菜</span><strong>有機蜜雪兒白菜</strong></a><a class="item" href="snow-cai.html"><span>特色葉菜</span><strong>有機雪菜</strong></a><a class="item" href="qingsong-cai.html"><span>特色葉菜</span><strong>有機青松菜</strong></a><a class="item" href="cabbage.html"><span>特色葉菜</span><strong>有機高麗菜</strong></a><a class="item" href="broccoli.html"><span>特色葉菜</span><strong>有機青花菜</strong></a><a class="item" href="cauliflower.html"><span>特色葉菜</span><strong>有機白花菜</strong></a><a class="item" href="cucumber.html"><span>特色葉菜</span><strong>有機小黃瓜</strong></a></div></section>
-</div>
-</body></html>
+  <main class="wrap">
+    <section class="hero">
+      <div class="brand">佳雨農場｜安心有機，日常好煮</div>
+      <h1>今天這包菜，這樣煮最好吃</h1>
+      <p>每一包佳雨農場的有機蔬菜，都整理成兩個最好上手的料理方式。點進去，就能看到食材、三步驟做法與小撇步。</p>
+    </section>
+    <div class="topbar">
+      <a class="pill" href="index.html">回首頁</a>
+      <a class="pill" href="#all">直接選菜</a>
+    </div>
+    <div id="all"><section class="cat-section">
+      <div class="cat-head">
+        <span class="cat-no">01</span>
+        <div>
+          <h2>家常快炒</h2>
+          <p>最常見、最好上手，適合日常晚餐快速上桌。</p>
+        </div>
+      </div>
+      <div class="veg-grid"><a class="veg-card" href="butter-cabbage.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機奶油白菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="komatsuna.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機小松菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="baby-bok-choy.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機小白菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="baby-mustard.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機小芥菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="you-cai.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機油菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="water-spinach.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機空心菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="gai-lan.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機芥藍菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="tongho.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機茼蒿</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="bok-choy.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機青江菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="qing-you-cai.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機青油菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="black-leaf-cabbage.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機黑葉白菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="a-cai.html">
+          <span class="veg-label">家常快炒</span>
+          <strong>有機Ａ菜</strong>
+          <em>查看兩種料理方式</em>
+        </a></div>
+    </section><section class="cat-section">
+      <div class="cat-head">
+        <span class="cat-no">02</span>
+        <div>
+          <h2>煮湯火鍋</h2>
+          <p>適合清湯、鍋物、溫潤暖胃的做法。</p>
+        </div>
+      </div>
+      <div class="veg-grid"><a class="veg-card" href="mizuna.html">
+          <span class="veg-label">煮湯火鍋</span>
+          <strong>有機京都水菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="mountain-spinach.html">
+          <span class="veg-label">煮湯火鍋</span>
+          <strong>有機山菠菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="swiss-chard.html">
+          <span class="veg-label">煮湯火鍋</span>
+          <strong>有機瑞士菠菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="japanese-tongho.html">
+          <span class="veg-label">煮湯火鍋</span>
+          <strong>有機日本茼蒿</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="sweet-choy-sum.html">
+          <span class="veg-label">煮湯火鍋</span>
+          <strong>有機甜菜心</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="beet-greens.html">
+          <span class="veg-label">煮湯火鍋</span>
+          <strong>有機甜菜葉</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="spinach.html">
+          <span class="veg-label">煮湯火鍋</span>
+          <strong>有機菠菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="radish-leaf.html">
+          <span class="veg-label">煮湯火鍋</span>
+          <strong>有機葉蘿蔔</strong>
+          <em>查看兩種料理方式</em>
+        </a></div>
+    </section><section class="cat-section">
+      <div class="cat-head">
+        <span class="cat-no">03</span>
+        <div>
+          <h2>生食沙拉</h2>
+          <p>清爽脆嫩，適合涼拌、沙拉與輕食。</p>
+        </div>
+      </div>
+      <div class="veg-grid"><a class="veg-card" href="butter-lettuce.html">
+          <span class="veg-label">生食沙拉</span>
+          <strong>有機奶油萵苣</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="sweet-romaine.html">
+          <span class="veg-label">生食沙拉</span>
+          <strong>有機甜蘿蔓</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="fushan-lettuce.html">
+          <span class="veg-label">生食沙拉</span>
+          <strong>有機福山萵苣</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="emerald-lettuce.html">
+          <span class="veg-label">生食沙拉</span>
+          <strong>有機綠寶石萵苣</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="chicory.html">
+          <span class="veg-label">生食沙拉</span>
+          <strong>有機菊苣</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="romaine.html">
+          <span class="veg-label">生食沙拉</span>
+          <strong>有機蘿蔓</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="oak-leaf-lettuce.html">
+          <span class="veg-label">生食沙拉</span>
+          <strong>有機鹿角萵苣</strong>
+          <em>查看兩種料理方式</em>
+        </a></div>
+    </section><section class="cat-section">
+      <div class="cat-head">
+        <span class="cat-no">04</span>
+        <div>
+          <h2>特色葉菜</h2>
+          <p>有風味、有記憶點，能做出更有特色的一餐。</p>
+        </div>
+      </div>
+      <div class="veg-grid"><a class="veg-card" href="you-ai-cabbage.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機優愛白菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="qianbao-cai.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機千寶菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="weimei-cai.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機味美菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="tagu-cai.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機塔菇菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="hiroshima-greens.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機廣島菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="kale.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機羽衣甘藍</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="lotus-cabbage.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機荷葉白菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="amaranth.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機莧菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="michelle-cabbage.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機蜜雪兒白菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="snow-cai.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機雪菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="qingsong-cai.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機青松菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="cabbage.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機高麗菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="broccoli.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機青花菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="cauliflower.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機白花菜</strong>
+          <em>查看兩種料理方式</em>
+        </a><a class="veg-card" href="cucumber.html">
+          <span class="veg-label">特色葉菜</span>
+          <strong>有機小黃瓜</strong>
+          <em>查看兩種料理方式</em>
+        </a></div>
+    </section></div>
+    <div class="footer-link"><a href="index.html">← 返回首頁</a></div>
+  </main>
+</body>
+</html>
