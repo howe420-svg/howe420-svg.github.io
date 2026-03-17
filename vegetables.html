@@ -9,9 +9,6 @@ body{font-family:'PingFang TC',sans-serif;background:#f6f7f4;color:#233126;line-
 .hero{background:linear-gradient(135deg,#6f9967,#2f5a30);color:#fff;border-radius:24px;padding:28px}
 .hero h1{font-size:40px;line-height:1.2;margin:10px 0 12px}
 .hero p{font-size:18px;max-width:760px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:28px}
-.card{background:#fff;border:1px solid #dfe6da;border-radius:18px;padding:20px}
-.card h3{margin:0 0 6px;color:#2f5a30}
 .cat{margin-top:34px}
 .cat h2{font-size:28px;margin-bottom:8px;color:#233126}
 .desc{color:#5f6f63;margin-bottom:14px}
@@ -19,7 +16,7 @@ body{font-family:'PingFang TC',sans-serif;background:#f6f7f4;color:#233126;line-
 .item{display:block;background:#fff;border:1px solid #dfe6da;border-radius:14px;padding:16px;text-decoration:none;color:#233126}
 .item span{display:block;font-size:13px;color:#6c7a6f;margin-bottom:6px}
 .item strong{font-size:20px}
-.note{margin-top:30px;background:#fff;border:1px dashed #c7d3c3;border-radius:16px;padding:18px;color:#526052}
+@media (max-width: 680px){ .hero h1{font-size:32px} .hero p{font-size:16px} }
 </style>
 </head>
 <body>
@@ -27,9 +24,8 @@ body{font-family:'PingFang TC',sans-serif;background:#f6f7f4;color:#233126;line-
 <section class="hero">
 <div>佳雨農場｜安心有機，日常好煮</div>
 <h1>今天這包菜，這樣煮最好吃</h1>
-<p>把最常見的葉菜分成四大類，點進去就能看到完整食材、三步驟做法與小撇步。這一版全部單層檔案，不需要再建第二層資料夾。</p>
+<p>把最常見的葉菜分成四大類，點進去就能看到兩種料理方式、完整食材、三步驟做法與小撇步。</p>
 </section>
 <section class="cat"><h2>家常快炒</h2><p class="desc">最常見、最好上手，適合日常晚餐快速上桌。</p><div class="list"><a class="item" href="butter-cabbage.html"><span>家常快炒</span><strong>有機奶油白菜</strong></a><a class="item" href="komatsuna.html"><span>家常快炒</span><strong>有機小松菜</strong></a><a class="item" href="baby-bok-choy.html"><span>家常快炒</span><strong>有機小白菜</strong></a><a class="item" href="baby-mustard.html"><span>家常快炒</span><strong>有機小芥菜</strong></a><a class="item" href="you-cai.html"><span>家常快炒</span><strong>有機油菜</strong></a><a class="item" href="water-spinach.html"><span>家常快炒</span><strong>有機空心菜</strong></a><a class="item" href="gai-lan.html"><span>家常快炒</span><strong>有機芥藍菜</strong></a><a class="item" href="tongho.html"><span>家常快炒</span><strong>有機茼蒿</strong></a><a class="item" href="bok-choy.html"><span>家常快炒</span><strong>有機青江菜</strong></a><a class="item" href="qing-you-cai.html"><span>家常快炒</span><strong>有機青油菜</strong></a><a class="item" href="black-leaf-cabbage.html"><span>家常快炒</span><strong>有機黑葉白菜</strong></a><a class="item" href="a-cai.html"><span>家常快炒</span><strong>有機Ａ菜</strong></a></div></section><section class="cat"><h2>煮湯火鍋</h2><p class="desc">適合清湯、鍋物、溫潤暖胃的做法。</p><div class="list"><a class="item" href="mizuna.html"><span>煮湯火鍋</span><strong>有機京都水菜</strong></a><a class="item" href="mountain-spinach.html"><span>煮湯火鍋</span><strong>有機山菠菜</strong></a><a class="item" href="swiss-chard.html"><span>煮湯火鍋</span><strong>有機瑞士菠菜</strong></a><a class="item" href="japanese-tongho.html"><span>煮湯火鍋</span><strong>有機日本茼蒿</strong></a><a class="item" href="sweet-choy-sum.html"><span>煮湯火鍋</span><strong>有機甜菜心</strong></a><a class="item" href="beet-greens.html"><span>煮湯火鍋</span><strong>有機甜菜葉</strong></a><a class="item" href="spinach.html"><span>煮湯火鍋</span><strong>有機菠菜</strong></a><a class="item" href="radish-leaf.html"><span>煮湯火鍋</span><strong>有機葉蘿蔔</strong></a></div></section><section class="cat"><h2>生食沙拉</h2><p class="desc">清爽脆嫩，適合涼拌、沙拉與輕食。</p><div class="list"><a class="item" href="butter-lettuce.html"><span>生食沙拉</span><strong>有機奶油萵苣</strong></a><a class="item" href="sweet-romaine.html"><span>生食沙拉</span><strong>有機甜蘿蔓</strong></a><a class="item" href="fushan-lettuce.html"><span>生食沙拉</span><strong>有機福山萵苣</strong></a><a class="item" href="emerald-lettuce.html"><span>生食沙拉</span><strong>有機綠寶石萵苣</strong></a><a class="item" href="chicory.html"><span>生食沙拉</span><strong>有機菊苣</strong></a><a class="item" href="romaine.html"><span>生食沙拉</span><strong>有機蘿蔓</strong></a><a class="item" href="oak-leaf-lettuce.html"><span>生食沙拉</span><strong>有機鹿角萵苣</strong></a></div></section><section class="cat"><h2>特色葉菜</h2><p class="desc">有風味、有記憶點，能做出更有特色的一餐。</p><div class="list"><a class="item" href="you-ai-cabbage.html"><span>特色葉菜</span><strong>有機優愛白菜</strong></a><a class="item" href="qianbao-cai.html"><span>特色葉菜</span><strong>有機千寶菜</strong></a><a class="item" href="weimei-cai.html"><span>特色葉菜</span><strong>有機味美菜</strong></a><a class="item" href="tagu-cai.html"><span>特色葉菜</span><strong>有機塔菇菜</strong></a><a class="item" href="hiroshima-greens.html"><span>特色葉菜</span><strong>有機廣島菜</strong></a><a class="item" href="kale.html"><span>特色葉菜</span><strong>有機羽衣甘藍</strong></a><a class="item" href="lotus-cabbage.html"><span>特色葉菜</span><strong>有機荷葉白菜</strong></a><a class="item" href="amaranth.html"><span>特色葉菜</span><strong>有機莧菜</strong></a><a class="item" href="michelle-cabbage.html"><span>特色葉菜</span><strong>有機蜜雪兒白菜</strong></a><a class="item" href="snow-cai.html"><span>特色葉菜</span><strong>有機雪菜</strong></a><a class="item" href="qingsong-cai.html"><span>特色葉菜</span><strong>有機青松菜</strong></a><a class="item" href="cabbage.html"><span>特色葉菜</span><strong>有機高麗菜</strong></a><a class="item" href="broccoli.html"><span>特色葉菜</span><strong>有機青花菜</strong></a><a class="item" href="cauliflower.html"><span>特色葉菜</span><strong>有機白花菜</strong></a><a class="item" href="cucumber.html"><span>特色葉菜</span><strong>有機小黃瓜</strong></a></div></section>
-<div class="note">上傳方式最簡單：把這一包解壓後，除了不要覆蓋你原本的首頁，其餘檔案全部放在網站同一層即可。</div>
 </div>
 </body></html>
