@@ -13,10 +13,10 @@
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45%,#eef1eb 100%);color:var(--text);font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.75}
 .wrap{max-width:1120px;margin:0 auto;padding:18px 18px 50px}
-.hero{background:linear-gradient(135deg,#7eb077 0%,#2d6a34 100%);border-radius:44px;color:#fff;padding:34px 24px 30px;box-shadow:var(--shadow)}
+.hero{background:linear-gradient(135deg,#86b97f 0%,#2d6a34 100%);border-radius:44px;color:#fff;padding:38px 28px 34px;box-shadow:var(--shadow);overflow:hidden;position:relative}.hero:before{content:"";position:absolute;inset:auto -10% -40% auto;width:380px;height:380px;background:radial-gradient(circle,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 68%);pointer-events:none}
 .hero-inner{max-width:920px;margin:0 auto}
-.brand{font-size:clamp(20px,2.4vw,34px);letter-spacing:.8px;opacity:.97}
-.hero h1{margin:18px 0 0;font-size:clamp(58px,8vw,118px);line-height:1.02;letter-spacing:1px}
+.brand{font-size:clamp(24px,3vw,40px);letter-spacing:1px;opacity:.98;font-weight:700}
+.hero h1{margin:20px 0 0;font-size:clamp(56px,7.4vw,108px);line-height:.98;letter-spacing:1px;text-wrap:balance;max-width:8.2em}
 .grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:22px;margin-top:22px}
 .card{background:rgba(255,255,255,.86);backdrop-filter: blur(8px);border:1px solid rgba(216,226,212,.95);border-radius:30px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
 .kicker{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--soft);color:var(--green);font-size:14px;font-weight:900;margin-bottom:14px}
@@ -48,9 +48,9 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
 }
 @media (max-width:680px){
   .wrap{padding:14px 14px 40px}
-  .hero{border-radius:30px;padding:26px 18px 22px}
-  .brand{font-size:16px}
-  .hero h1{font-size:clamp(44px,15vw,76px)}
+  .hero{border-radius:30px;padding:28px 18px 24px}
+  .brand{font-size:22px;line-height:1.35}
+  .hero h1{font-size:clamp(52px,15vw,82px);line-height:.96;max-width:6.2em}
   .card{padding:20px;border-radius:24px}
   .action{min-height:82px;font-size:clamp(20px,6vw,28px)}
 }
@@ -61,7 +61,7 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
     <section class="hero">
       <div class="hero-inner">
         <div class="brand">佳雨農場｜安心有機，日常好煮</div>
-        <h1>今天這包菜，這樣<br>煮最好吃</h1>
+        <h1>今天這包菜，<br>這樣煮最好吃</h1>
       </div>
     </section>
 
