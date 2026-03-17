@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>佳雨農場｜今天這包菜，這樣煮最好吃</title>
-<meta name="description" content="佳雨農場有機蔬菜掃碼首頁，快速查看料理建議、保存方式與蔬菜特色。">
+<title>佳雨農場｜桃園有機蔬菜推薦，這包菜這樣煮最好吃</title>
+<meta name="description" content="佳雨農場｜桃園有機蔬菜推薦，產地直送，快速查看料理建議、保存方式與蔬菜特色。">
 <style>
 :root{
   --bg:#f3f4ef; --card:#ffffff; --line:#d8e2d4; --text:#1e2d22; --muted:#6f7d72;
@@ -14,12 +14,15 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45%,#eef1eb 100%);color:var(--text);font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.75}
 .wrap{max-width:1120px;margin:0 auto;padding:18px 18px 56px}
-.hero{background:linear-gradient(135deg,#8bbf84 0%,#2f6f37 100%);border-radius:44px;color:#fff;padding:34px 30px 34px;box-shadow:var(--shadow);overflow:hidden;position:relative}
-.hero:before{content:"";position:absolute;inset:auto -10% -42% auto;width:430px;height:430px;background:radial-gradient(circle,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 68%);pointer-events:none}
-.hero-inner{max-width:920px;margin:0 auto}
-.brand{font-size:clamp(20px,2.2vw,28px);letter-spacing:.5px;line-height:1.45;opacity:.98;font-weight:800;margin:0}
-.hero h1{margin:24px 0 0;font-size:clamp(58px,7.2vw,100px);line-height:1.02;letter-spacing:.5px;font-weight:900;max-width:6.3em}
-.hero-sub{margin:18px 0 0;color:rgba(255,255,255,.94);font-size:clamp(18px,2vw,24px);max-width:18em;font-weight:600;line-height:1.6}
+.hero{background:linear-gradient(135deg,#8fc788 0%,#5f9b5b 38%,#2f6f37 100%);border-radius:44px;color:#fff;padding:38px 34px 34px;box-shadow:var(--shadow);overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.18)}
+.hero:before{content:"";position:absolute;inset:auto -6% -36% auto;width:420px;height:420px;background:radial-gradient(circle,rgba(255,255,255,.15) 0,rgba(255,255,255,0) 70%);pointer-events:none}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 30%);pointer-events:none}
+.hero-inner{max-width:860px;margin:0;position:relative;z-index:1}
+.brand{font-size:clamp(22px,2.2vw,30px);letter-spacing:.4px;line-height:1.45;opacity:.98;font-weight:800;margin:0 0 22px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.22)}
+.hero h1{margin:0;font-size:clamp(56px,7vw,96px);line-height:1.06;letter-spacing:.2px;font-weight:900;max-width:8.2em}
+.hero h1 .line{display:block}
+.hero-sub{margin:22px 0 0;color:rgba(255,255,255,.95);font-size:clamp(19px,2vw,25px);max-width:24em;font-weight:600;line-height:1.72}
+.hero-sub .line{display:block}
 .grid{display:grid;grid-template-columns:1.04fr .96fr;gap:22px;margin-top:22px}
 .card{background:rgba(255,255,255,.88);backdrop-filter: blur(8px);border:1px solid rgba(216,226,212,.95);border-radius:30px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
 .kicker{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--soft);color:var(--green);font-size:14px;font-weight:900;margin-bottom:14px}
@@ -46,9 +49,9 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
 @media (max-width:680px){
   .wrap{padding:14px 14px 40px}
   .hero{border-radius:30px;padding:24px 20px 26px}
-  .brand{font-size:19px;line-height:1.5}
-  .hero h1{font-size:clamp(50px,13vw,72px);line-height:1.04;max-width:5.2em;letter-spacing:0;margin-top:18px}
-  .hero-sub{font-size:18px;max-width:15em;margin-top:14px}
+  .brand{font-size:18px;line-height:1.5;margin-bottom:16px;padding-bottom:12px}
+  .hero h1{font-size:clamp(48px,12vw,68px);line-height:1.08;max-width:6.2em;letter-spacing:0}
+  .hero-sub{font-size:18px;max-width:100%;margin-top:18px;line-height:1.72}
   .card{padding:20px;border-radius:24px}
   .action{min-height:82px;font-size:clamp(20px,6vw,28px)}
   .quick-link{min-height:auto}
@@ -61,8 +64,8 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
     <section class="hero">
       <div class="hero-inner">
         <p class="brand">佳雨農場｜安心有機，日常好煮</p>
-        <h1>今天這包菜，<br>這樣煮最好吃</h1>
-        <p class="hero-sub">每一包佳雨農場的有機蔬菜，都幫你整理成實用料理建議，掃一下就知道今晚怎麼煮。</p>
+        <h1><span class="line">今天這包菜，</span><span class="line">這樣煮最好吃</span></h1>
+        <p class="hero-sub"><span class="line">每一包佳雨農場的有機蔬菜，</span><span class="line">都幫你整理成實用料理建議。</span></p>
       </div>
     </section>
 
