@@ -11,14 +11,17 @@
   --green:#2d6a34; --green2:#5d9158; --soft:#eef4ec; --shadow:0 20px 48px rgba(29,63,31,.10);
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45%,#eef1eb 100%);color:var(--text);font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.75}
-.wrap{max-width:1120px;margin:0 auto;padding:18px 18px 50px}
-.hero{background:linear-gradient(135deg,#86b97f 0%,#2d6a34 100%);border-radius:44px;color:#fff;padding:38px 28px 34px;box-shadow:var(--shadow);overflow:hidden;position:relative}.hero:before{content:"";position:absolute;inset:auto -10% -40% auto;width:380px;height:380px;background:radial-gradient(circle,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 68%);pointer-events:none}
-.hero-inner{max-width:920px;margin:0 auto}
-.brand{font-size:clamp(24px,3vw,40px);letter-spacing:1px;opacity:.98;font-weight:700}
-.hero h1{margin:20px 0 0;font-size:clamp(56px,7.4vw,108px);line-height:.98;letter-spacing:1px;text-wrap:balance;max-width:8.2em}
-.grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:22px;margin-top:22px}
-.card{background:rgba(255,255,255,.86);backdrop-filter: blur(8px);border:1px solid rgba(216,226,212,.95);border-radius:30px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
+.wrap{max-width:1120px;margin:0 auto;padding:18px 18px 56px}
+.hero{background:linear-gradient(135deg,#8bbf84 0%,#2f6f37 100%);border-radius:44px;color:#fff;padding:34px 28px 30px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;inset:auto -8% -36% auto;width:420px;height:420px;background:radial-gradient(circle,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 68%);pointer-events:none}
+.hero-inner{max-width:940px;margin:0 auto}
+.brand{font-size:clamp(24px,3vw,38px);letter-spacing:.5px;line-height:1.35;opacity:.98;font-weight:800;margin:0;max-width:12em}
+.hero h1{margin:18px 0 0;font-size:clamp(64px,8.2vw,112px);line-height:.95;letter-spacing:.5px;font-weight:900;max-width:6.2em;text-wrap:balance}
+.hero-sub{margin:18px 0 0;color:rgba(255,255,255,.92);font-size:clamp(18px,2.2vw,28px);max-width:16em;font-weight:600;line-height:1.55}
+.grid{display:grid;grid-template-columns:1.02fr .98fr;gap:22px;margin-top:22px}
+.card{background:rgba(255,255,255,.88);backdrop-filter: blur(8px);border:1px solid rgba(216,226,212,.95);border-radius:30px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
 .kicker{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--soft);color:var(--green);font-size:14px;font-weight:900;margin-bottom:14px}
 .big-title{margin:0 0 10px;font-size:clamp(30px,4vw,46px);line-height:1.18;font-weight:900}
 .lead{margin:0;color:var(--muted);font-size:clamp(18px,2.2vw,22px)}
@@ -26,11 +29,6 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
 .action{display:flex;justify-content:center;align-items:center;min-height:92px;padding:18px 20px;border-radius:22px;background:linear-gradient(180deg,#f5f9f4 0%,#eef4ec 100%);border:1px solid var(--line);color:var(--green);text-decoration:none;font-size:clamp(22px,2.6vw,30px);font-weight:900}
 .image-card img{width:100%;display:block;border-radius:28px;object-fit:cover;box-shadow:0 16px 40px rgba(45,106,52,.10)}
 .image-card p{margin:14px 4px 0;color:var(--muted);font-size:18px;font-weight:700}
-.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-.mini{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 8px 22px rgba(0,0,0,.03)}
-.mini h3{margin:10px 0 8px;font-size:28px;line-height:1.18}
-.mini p{margin:0;color:var(--muted);font-size:17px}
-.mini .num{display:inline-flex;justify-content:center;align-items:center;width:38px;height:38px;border-radius:12px;background:var(--soft);color:var(--green);font-weight:900}
 .section-title{margin:0 0 14px;font-size:clamp(26px,3vw,38px);line-height:1.15}
 .note-list{display:grid;gap:14px}
 .note-item{padding:16px 18px;border-radius:18px;background:#fafcf9;border:1px solid var(--line)}
@@ -43,14 +41,14 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
 .footer-link a{display:inline-block;padding:14px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--green);text-decoration:none;font-weight:900}
 @media (max-width:900px){
   .grid{grid-template-columns:1fr}
-  .mini-grid{grid-template-columns:1fr}
   .quick-grid{grid-template-columns:1fr}
 }
 @media (max-width:680px){
   .wrap{padding:14px 14px 40px}
-  .hero{border-radius:30px;padding:28px 18px 24px}
-  .brand{font-size:22px;line-height:1.35}
-  .hero h1{font-size:clamp(52px,15vw,82px);line-height:.96;max-width:6.2em}
+  .hero{border-radius:30px;padding:26px 20px 24px}
+  .brand{font-size:22px;max-width:10.5em}
+  .hero h1{font-size:clamp(58px,15vw,88px);line-height:.96;max-width:4.8em;letter-spacing:0}
+  .hero-sub{font-size:19px;max-width:13em;margin-top:16px}
   .card{padding:20px;border-radius:24px}
   .action{min-height:82px;font-size:clamp(20px,6vw,28px)}
 }
@@ -60,8 +58,9 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
   <main class="wrap">
     <section class="hero">
       <div class="hero-inner">
-        <div class="brand">佳雨農場｜安心有機，日常好煮</div>
+        <p class="brand">佳雨農場｜安心有機，日常好煮</p>
         <h1>今天這包菜，<br>這樣煮最好吃</h1>
+        <p class="hero-sub">每一包佳雨農場的有機蔬菜，都幫你把今晚怎麼煮，先整理好了。</p>
       </div>
     </section>
 
@@ -71,25 +70,25 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
       <div class="quick-grid">
         <a class="quick-link" href="vegetables.html"><span>全部蔬菜</span><strong>查看料理建議總覽</strong></a>
         <a class="quick-link" href="bok-choy.html"><span>人氣常見</span><strong>有機青江菜</strong></a>
-        <a class="quick-link" href="butter-cabbage.html"><span>家常快炒</span><strong>有機奶油白菜</strong></a>
+        <a class="quick-link" href="butter-cabbage.html"><span>家常好做</span><strong>有機奶油白菜</strong></a>
         <a class="quick-link" href="qingsong-cai.html"><span>特色葉菜</span><strong>有機青松菜</strong></a>
       </div>
     </section>
 
     <section class="grid" style="margin-top:22px">
-      <div class="card image-card">
-        <img src="homepage-kitchen-vegetables.jpg" alt="佳雨農場蔬菜料理示意圖">
-        <p>像走進一個會輕聲告訴你：這道菜怎麼煮會更好吃的廚房。</p>
-      </div>
       <div class="card">
         <span class="kicker">掃碼頁首頁</span>
         <h2 class="big-title">每一包佳雨農場的菜，都幫你整理好了</h2>
-        <p class="lead">點進去直接看料理方式，少想一點，晚餐更快上桌。</p>
+        <p class="lead">點進去直接看料理方式、保存方式與這包菜特色，少想一點，晚餐更快上桌。</p>
         <div class="action-grid">
           <a class="action" href="vegetables.html">料理建議</a>
           <a class="action" href="#save">保存方式</a>
           <a class="action" href="#features">這包菜特色</a>
         </div>
+      </div>
+      <div class="card image-card">
+        <img src="homepage-kitchen-vegetables.jpg" alt="佳雨農場蔬菜料理示意圖">
+        <p>像走進一個會輕聲告訴你：這道菜怎麼煮會更好吃的廚房。</p>
       </div>
     </section>
 
@@ -122,7 +121,6 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
         </div>
       </div>
     </section>
-
   </main>
 </body>
 </html>
