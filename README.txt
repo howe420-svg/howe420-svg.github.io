@@ -1,18 +1,11 @@
-佳雨農場網站完整覆蓋版（首頁設計升級）
+佳雨農場網站完整覆蓋版 v7
 
-內容包含：
-- index.html（新版首頁）
-- vegetables.html（新版蔬菜總覽）
-- 各蔬菜料理頁（雙料理方式、設計升級）
-- homepage-kitchen-vegetables.jpg（首頁插圖）
+本版更新：
+1. 首頁插圖上移
+2. 首頁與料理頁將「兩種料理方式」改為「料理方式」
+3. 蔬菜總覽改為「常見蔬菜／特色蔬菜／生食沙拉」分類
+4. 總覽已移除高麗菜、青花菜、白花菜、小黃瓜
 
-使用方式：
-1. 解壓縮本包
-2. 將全部檔案上傳到網站根目錄覆蓋
-3. 確認圖片檔與 html 都有上傳
-
-建議檢查：
-- /index.html
-- /vegetables.html
-- /butter-cabbage.html
-- /qingsong-cai.html
+上傳方式：
+將整包檔案解壓後上傳至網站根目錄覆蓋。
+若網站上原本已有 cabbage.html、broccoli.html、cauliflower.html、cucumber.html，請一併從主機刪除，避免舊網址殘留。
