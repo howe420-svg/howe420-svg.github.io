@@ -15,3 +15,9 @@
 建議：
 - 手機版可直接使用
 - QR code 建議指向 vegetables.html 或各蔬菜個別頁面
+
+
+新增檔案說明:
+- homepage-section.html：可直接貼進你原本首頁的區塊
+- homepage-demo.html：完整示意首頁，可先預覽效果
+- generate_pages.py：你原始提供的產頁腳本備份
