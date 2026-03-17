@@ -1,19 +1,49 @@
-<!doctype html>
-<html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>佳雨農場</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>佳雨農場｜蔬菜料理建議</title>
+<style>
+body{font-family:'PingFang TC',sans-serif;background:#f6f7f4;color:#233126;line-height:1.7;margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding:24px}
+.hero{background:linear-gradient(135deg,#6f9967,#2f5a30);color:#fff;border-radius:24px;padding:34px 28px}
+.hero h1{font-size:40px;line-height:1.2;margin:10px 0 12px}
+.hero p{font-size:18px;max-width:760px}
+.section{background:#fff;border:1px solid #dfe6da;border-radius:20px;padding:24px;margin-top:24px}
+.btn{display:inline-block;padding:14px 24px;background:#2e5a27;color:#fff;text-decoration:none;border-radius:10px;font-size:16px;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.card{background:#f7fbf4;border:1px solid #dfead8;border-radius:16px;padding:18px}
+.card h3{margin:0 0 8px;color:#1f3d1a}
+.muted{color:#5f6f63}
+</style>
 </head>
 <body>
-  <main class="container">
-    <div class="topbar"><span class="badge">佳雨農場</span></div>
-    <h1>網站整合示意首頁</h1>
-    <p class="subtitle">正式上線時，請把現有網站的首頁保留，並在導覽列加入「蔬菜料理建議」連到 vegetables.html。</p>
-    <div class="btn-row">
-      <a class="btn primary" href="vegetables.html">前往蔬菜料理建議</a>
+<div class="wrap">
+  <section class="hero">
+    <div>佳雨農場 Jiayu Farm</div>
+    <h1>今晚這包菜，這樣煮最好吃</h1>
+    <p>每一包佳雨農場的有機蔬菜，都有最適合的料理方式。從家常快炒、暖心湯品，到簡單沙拉與特色吃法，幫你更快把新鮮蔬菜變成一餐。</p>
+    <p><a class="btn" href="vegetables.html">立即查看蔬菜料理建議</a></p>
+  </section>
+
+  <section class="section">
+    <h2 style="margin-top:0;">這一版可以直接整包覆蓋上傳</h2>
+    <p class="muted">首頁、蔬菜總表、各別料理頁，全部都已經整理成單層結構，不需要另外建立 recipes_full 資料夾。</p>
+    <div class="grid">
+      <div class="card">
+        <h3>1. 直接上傳</h3>
+        <div class="muted">把這一包所有 HTML 檔直接上傳到網站根目錄即可。</div>
+      </div>
+      <div class="card">
+        <h3>2. 不會再 404</h3>
+        <div class="muted">vegetables.html 裡面的所有連結都已改成同層檔案。</div>
+      </div>
+      <div class="card">
+        <h3>3. 手機也好點</h3>
+        <div class="muted">首頁只保留一個主要入口，手機上會比較直覺。</div>
+      </div>
     </div>
-  </main>
+  </section>
+</div>
 </body>
 </html>

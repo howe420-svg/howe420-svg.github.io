@@ -1,13 +1,24 @@
-佳雨農場網站安全修復包
+佳雨農場 完整覆蓋版
+====================
 
-這一包故意不放 index.html，也不放 demo 首頁，避免再次覆蓋你的正式首頁。
+這一包包含 index.html，可直接整包覆蓋上傳。
 
-正確用法：
-1. 先把目前首頁恢復成你原本的版本。
-2. 上傳 vegetables.html
-3. 上傳整個 recipes_full 資料夾
-4. 打開 homepage-addon-only.html，複製裡面的 HTML 區塊，貼到原首頁中
+上傳方式：
+1. 解壓 ZIP
+2. 將全部 HTML 檔案上傳到網站根目錄
+3. 若主機有快取，重新整理或清快取後再測試
 
-不要做的事：
-- 不要把 restore-instructions.html 改名成 index.html
-- 不要用任何 demo 頁面去覆蓋首頁
+完成後建議測試：
+/index.html
+/vegetables.html
+/qingsong-cai.html
+/komatsuna.html
+/butter-cabbage.html
+
+正確結構：
+/index.html
+/vegetables.html
+/butter-cabbage.html
+/komatsuna.html
+/qingsong-cai.html
+...其餘全部同層
