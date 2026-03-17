@@ -1,16 +1,17 @@
-佳雨農場 36 種修正版 v2
-這包內容：
-- vegetables.html
-- homepage-addon-only.html
-- 36 個蔬菜頁
-- DELETE_LIST.txt（舊檔刪除清單）
+佳雨農場蔬菜料理頁面包
 
-使用方式：
-1. 不要覆蓋 index.html
-2. 先依 DELETE_LIST.txt 刪除舊檔
-3. 再上傳 vegetables.html 與 36 個蔬菜頁
-4. homepage-addon-only.html 只有在你要貼首頁區塊時才需要
+內容：
+- vegetables.html：蔬菜料理總覽頁
+- style.css：共用樣式
+- 42 個蔬菜內頁 html
+- index.html：整合示意首頁（不是用來覆蓋你正式首頁的必要檔案）
 
-測試：
-- /vegetables.html 只到有機青松菜
-- /komatsuna.html 會看到兩塊
+你網站要做的事：
+1. 把整個資料夾內檔案上傳到網站同一層目錄
+2. 在原本網站導覽或按鈕加上一個連結：
+   vegetables.html
+3. 若你已有首頁 index.html，請不要直接覆蓋，除非你就是要用我附的示意版本
+
+建議：
+- 手機版可直接使用
+- QR code 建議指向 vegetables.html 或各蔬菜個別頁面
