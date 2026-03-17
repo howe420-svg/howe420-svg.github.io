@@ -14,29 +14,29 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45%,#eef1eb 100%);color:var(--text);font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.75}
 .wrap{max-width:1120px;margin:0 auto;padding:18px 18px 56px}
-.hero{background:linear-gradient(135deg,#8bbf84 0%,#2f6f37 100%);border-radius:44px;color:#fff;padding:34px 28px 30px;box-shadow:var(--shadow);overflow:hidden;position:relative}
-.hero:before{content:"";position:absolute;inset:auto -8% -36% auto;width:420px;height:420px;background:radial-gradient(circle,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 68%);pointer-events:none}
-.hero-inner{max-width:940px;margin:0 auto}
-.brand{font-size:clamp(24px,3vw,38px);letter-spacing:.5px;line-height:1.35;opacity:.98;font-weight:800;margin:0;max-width:12em}
-.hero h1{margin:18px 0 0;font-size:clamp(64px,8.2vw,112px);line-height:.95;letter-spacing:.5px;font-weight:900;max-width:6.2em;text-wrap:balance}
-.hero-sub{margin:18px 0 0;color:rgba(255,255,255,.92);font-size:clamp(18px,2.2vw,28px);max-width:16em;font-weight:600;line-height:1.55}
-.grid{display:grid;grid-template-columns:1.02fr .98fr;gap:22px;margin-top:22px}
+.hero{background:linear-gradient(135deg,#8bbf84 0%,#2f6f37 100%);border-radius:44px;color:#fff;padding:34px 30px 34px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+.hero:before{content:"";position:absolute;inset:auto -10% -42% auto;width:430px;height:430px;background:radial-gradient(circle,rgba(255,255,255,.12) 0,rgba(255,255,255,0) 68%);pointer-events:none}
+.hero-inner{max-width:920px;margin:0 auto}
+.brand{font-size:clamp(20px,2.2vw,28px);letter-spacing:.5px;line-height:1.45;opacity:.98;font-weight:800;margin:0}
+.hero h1{margin:24px 0 0;font-size:clamp(58px,7.2vw,100px);line-height:1.02;letter-spacing:.5px;font-weight:900;max-width:6.3em}
+.hero-sub{margin:18px 0 0;color:rgba(255,255,255,.94);font-size:clamp(18px,2vw,24px);max-width:18em;font-weight:600;line-height:1.6}
+.grid{display:grid;grid-template-columns:1.04fr .96fr;gap:22px;margin-top:22px}
 .card{background:rgba(255,255,255,.88);backdrop-filter: blur(8px);border:1px solid rgba(216,226,212,.95);border-radius:30px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
 .kicker{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--soft);color:var(--green);font-size:14px;font-weight:900;margin-bottom:14px}
-.big-title{margin:0 0 10px;font-size:clamp(30px,4vw,46px);line-height:1.18;font-weight:900}
-.lead{margin:0;color:var(--muted);font-size:clamp(18px,2.2vw,22px)}
+.big-title,.section-title{margin:0 0 10px;font-size:clamp(30px,4vw,46px);line-height:1.18;font-weight:900}
+.lead{margin:0;color:var(--muted);font-size:clamp(18px,2vw,22px)}
 .action-grid{display:grid;gap:14px;margin-top:22px}
-.action{display:flex;justify-content:center;align-items:center;min-height:92px;padding:18px 20px;border-radius:22px;background:linear-gradient(180deg,#f5f9f4 0%,#eef4ec 100%);border:1px solid var(--line);color:var(--green);text-decoration:none;font-size:clamp(22px,2.6vw,30px);font-weight:900}
+.action{display:flex;justify-content:center;align-items:center;min-height:92px;padding:18px 20px;border-radius:22px;background:linear-gradient(180deg,#f5f9f4 0%,#eef4ec 100%);border:1px solid var(--line);color:var(--green);text-decoration:none;font-size:clamp(22px,2.4vw,30px);font-weight:900}
 .image-card img{width:100%;display:block;border-radius:28px;object-fit:cover;box-shadow:0 16px 40px rgba(45,106,52,.10)}
 .image-card p{margin:14px 4px 0;color:var(--muted);font-size:18px;font-weight:700}
-.section-title{margin:0 0 14px;font-size:clamp(26px,3vw,38px);line-height:1.15}
 .note-list{display:grid;gap:14px}
 .note-item{padding:16px 18px;border-radius:18px;background:#fafcf9;border:1px solid var(--line)}
 .note-item strong{display:block;color:var(--green);font-size:20px;margin-bottom:4px}
-.quick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.quick-link{display:block;padding:18px 20px;border-radius:20px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--text)}
-.quick-link span{display:block;color:var(--muted);font-size:13px;font-weight:700;margin-bottom:6px}
-.quick-link strong{font-size:24px;line-height:1.2}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.quick-link{display:block;padding:18px 20px;border-radius:22px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--text);min-height:148px}
+.quick-link span{display:block;color:var(--muted);font-size:14px;font-weight:800;margin-bottom:8px}
+.quick-link strong{display:block;font-size:30px;line-height:1.15;margin-bottom:10px}
+.quick-link em{display:block;color:var(--muted);font-style:normal;font-weight:700;font-size:16px;line-height:1.5}
 .footer-link{text-align:center;margin-top:26px}
 .footer-link a{display:inline-block;padding:14px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--green);text-decoration:none;font-weight:900}
 @media (max-width:900px){
@@ -45,12 +45,14 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
 }
 @media (max-width:680px){
   .wrap{padding:14px 14px 40px}
-  .hero{border-radius:30px;padding:26px 20px 24px}
-  .brand{font-size:22px;max-width:10.5em}
-  .hero h1{font-size:clamp(58px,15vw,88px);line-height:.96;max-width:4.8em;letter-spacing:0}
-  .hero-sub{font-size:19px;max-width:13em;margin-top:16px}
+  .hero{border-radius:30px;padding:24px 20px 26px}
+  .brand{font-size:19px;line-height:1.5}
+  .hero h1{font-size:clamp(50px,13vw,72px);line-height:1.04;max-width:5.2em;letter-spacing:0;margin-top:18px}
+  .hero-sub{font-size:18px;max-width:15em;margin-top:14px}
   .card{padding:20px;border-radius:24px}
   .action{min-height:82px;font-size:clamp(20px,6vw,28px)}
+  .quick-link{min-height:auto}
+  .quick-link strong{font-size:24px}
 }
 </style>
 </head>
@@ -60,7 +62,7 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
       <div class="hero-inner">
         <p class="brand">佳雨農場｜安心有機，日常好煮</p>
         <h1>今天這包菜，<br>這樣煮最好吃</h1>
-        <p class="hero-sub">每一包佳雨農場的有機蔬菜，都幫你把今晚怎麼煮，先整理好了。</p>
+        <p class="hero-sub">每一包佳雨農場的有機蔬菜，都幫你整理成實用料理建議，掃一下就知道今晚怎麼煮。</p>
       </div>
     </section>
 
@@ -68,10 +70,9 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
       <span class="kicker">快速入口</span>
       <h2 class="section-title">今晚先從這裡開始</h2>
       <div class="quick-grid">
-        <a class="quick-link" href="vegetables.html"><span>全部蔬菜</span><strong>查看料理建議總覽</strong></a>
-        <a class="quick-link" href="bok-choy.html"><span>人氣常見</span><strong>有機青江菜</strong></a>
-        <a class="quick-link" href="butter-cabbage.html"><span>家常好做</span><strong>有機奶油白菜</strong></a>
-        <a class="quick-link" href="qingsong-cai.html"><span>特色葉菜</span><strong>有機青松菜</strong></a>
+        <a class="quick-link" href="vegetables.html"><span>全部蔬菜</span><strong>查看料理建議總覽</strong><em>一次看全部蔬菜與分類入口。</em></a>
+        <a class="quick-link" href="vegetables.html#common"><span>先看最常煮的</span><strong>常見蔬菜</strong><em>奶油白菜、小松菜、青江菜這些最容易上手。</em></a>
+        <a class="quick-link" href="vegetables.html#special"><span>先找特別一點的</span><strong>特色蔬菜</strong><em>京都水菜、青松菜、塔菇菜等有記憶點的菜。</em></a>
       </div>
     </section>
 
@@ -79,7 +80,7 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
       <div class="card">
         <span class="kicker">掃碼頁首頁</span>
         <h2 class="big-title">每一包佳雨農場的菜，都幫你整理好了</h2>
-        <p class="lead">點進去直接看料理方式、保存方式與這包菜特色，少想一點，晚餐更快上桌。</p>
+        <p class="lead">點進去直接看料理建議、保存方式與這包菜特色，少想一點，晚餐更快上桌。</p>
         <div class="action-grid">
           <a class="action" href="vegetables.html">料理建議</a>
           <a class="action" href="#save">保存方式</a>
