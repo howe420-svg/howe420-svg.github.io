@@ -19,12 +19,12 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
 .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#9ace93 0%,#699f64 36%,#2f6f37 100%);border-radius:44px;color:#fff;padding:34px 34px 30px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.18)}
 .hero:before{content:"";position:absolute;right:-10%;bottom:-30%;width:440px;height:440px;background:radial-gradient(circle,rgba(255,255,255,.18) 0,rgba(255,255,255,0) 68%);pointer-events:none}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,0) 28%);pointer-events:none}
-.hero-inner{position:relative;z-index:1;max-width:760px}
+.hero-inner{position:relative;z-index:1;max-width:860px}
 .brand{margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.24);font-size:clamp(20px,2vw,28px);line-height:1.45;font-weight:800;letter-spacing:.2px;max-width:18em}
 .hero-copy{display:grid;gap:18px;align-items:start}
-.hero h1{margin:0;max-width:8.2ch;font-size:clamp(52px,6vw,82px);line-height:1.02;letter-spacing:-0.04em;font-weight:900;text-wrap:balance}
-.hero h1 .line{display:block}
-.hero-sub{margin:0;max-width:27em;color:rgba(255,255,255,.95);font-size:clamp(18px,1.85vw,23px);font-weight:600;line-height:1.78}
+.hero h1{margin:0;max-width:11ch;font-size:clamp(54px,6vw,84px);line-height:1.05;letter-spacing:-0.045em;font-weight:900}
+.hero h1 .line{display:block;white-space:nowrap}
+.hero-sub{margin:0;max-width:28em;color:rgba(255,255,255,.95);font-size:clamp(18px,1.85vw,23px);font-weight:600;line-height:1.78}
 .grid{display:grid;grid-template-columns:1.04fr .96fr;gap:22px;margin-top:22px}
 .card{background:rgba(255,255,255,.88);backdrop-filter: blur(8px);border:1px solid rgba(216,226,212,.95);border-radius:30px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
 .kicker{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--soft);color:var(--green);font-size:14px;font-weight:900;margin-bottom:14px}
@@ -47,19 +47,20 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
 .quick-link:after{content:"→";position:absolute;right:14px;bottom:14px;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;background:linear-gradient(180deg,var(--green) 0%,var(--deep) 100%);color:#fff;font-size:22px;font-weight:900;box-shadow:0 8px 20px rgba(35,76,42,.16)}
 .info-footer{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
 .info-chip{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.88);border:1px solid var(--line);color:var(--muted);font-size:15px;font-weight:800;text-align:center}
-.footer-link{text-align:center;margin-top:26px}
-.footer-link a{display:inline-block;padding:14px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--green);text-decoration:none;font-weight:900}
+.farm-story{display:grid;gap:18px}
+.farm-story p{margin:0;color:var(--muted);font-size:clamp(18px,2vw,21px);line-height:1.9;font-weight:700}
+.cta-btn{display:inline-block;margin-top:6px;padding:16px 28px;border-radius:20px;background:linear-gradient(180deg,var(--green2) 0%,var(--green) 100%);color:#fff;text-decoration:none;font-size:clamp(20px,2vw,26px);font-weight:900;box-shadow:0 12px 24px rgba(35,76,42,.18)}
 @media (max-width:900px){
   .grid{grid-template-columns:1fr}
   .quick-grid,.info-footer{grid-template-columns:1fr}
 }
 @media (max-width:680px){
   .wrap{padding:14px 14px 40px}
-  .hero{border-radius:30px;padding:24px 20px 24px}
+  .hero{border-radius:30px;padding:26px 20px 26px}
   .brand{font-size:17px;line-height:1.5;margin-bottom:14px;padding-bottom:10px;max-width:11em}
-  .hero-copy{gap:14px}
-  .hero h1{max-width:7.2ch;font-size:clamp(46px,11.2vw,60px);line-height:1.03;letter-spacing:-0.04em}
-  .hero-sub{font-size:17px;max-width:100%;line-height:1.72}
+  .hero-copy{gap:16px}
+  .hero h1{max-width:none;font-size:clamp(44px,11vw,58px);line-height:1.06;letter-spacing:-0.045em}
+  .hero-sub{font-size:17px;max-width:100%;line-height:1.78}
   .card{padding:20px;border-radius:24px}
   .action{min-height:82px;font-size:clamp(20px,6vw,28px);padding-right:68px}
   .action:after{right:12px;width:40px;height:40px;border-radius:12px}
@@ -129,15 +130,14 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
         </div>
       </div>
       <div class="card" id="about-farm">
-        <h2 class="section-title">認識佳雨有機農場</h2>
-        <div class="note-list">
-          <div class="note-item"><strong>安心栽培</strong>每天吃進嘴裡的菜，我們自己也願意端上餐桌。</div>
-          <div class="note-item"><strong>產地直送</strong>從農場整理到出貨，盡量把新鮮狀態送到你手上。</div>
-          <div class="note-item"><strong>日常實用</strong>不只賣菜，也幫你把每一包菜怎麼煮更順手整理好。</div>
+        <span class="kicker">認識佳雨農場</span>
+        <div class="farm-story">
+          <h2 class="big-title">我們希望每一包菜，都能被好好料理</h2>
+          <p>我們在桃園，以溫室種植有機蔬菜。希望不只把菜種好，也把「買回家之後怎麼煮」這件事做得更清楚。</p>
+          <div><a class="cta-btn" href="vegetables.html">了解農場</a></div>
         </div>
       </div>
     </section>
-    <div class="info-footer"><div class="info-chip">料理建議與分類入口更直覺</div><div class="info-chip">保存方式與蔬菜特色一頁整理</div><div class="info-chip">手機上滑動閱讀更順手</div></div>
   </main>
 </body>
 </html>
