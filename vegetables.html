@@ -29,19 +29,19 @@ body{margin:0;background:linear-gradient(180deg,#f4f5f1 0,#eef1eb 100%);color:va
 .cat-head h2{margin:2px 0 4px;font-size:clamp(30px,4vw,38px);line-height:1.15}
 .cat-head p{margin:0;color:var(--muted);font-size:17px}
 .veg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.veg-card{position:relative;display:block;padding:18px 58px 18px 18px;border-radius:22px;background:linear-gradient(180deg,#ffffff 0%,#f3f8f0 100%);border:1px solid #c8d6c4;text-decoration:none;color:var(--text);box-shadow:0 10px 24px rgba(36,62,32,.05);transition:transform .18s ease, box-shadow .18s ease}
+.veg-card{position:relative;display:block;padding:18px 72px 18px 18px;border-radius:22px;background:linear-gradient(180deg,#ffffff 0%,#f3f8f0 100%);border:1px solid #c8d6c4;text-decoration:none;color:var(--text);box-shadow:0 10px 24px rgba(36,62,32,.05);transition:transform .18s ease, box-shadow .18s ease}
 .veg-card:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(36,62,32,.08)}
 .veg-card.hidden{display:none}
 .veg-label{display:inline-block;margin-bottom:10px;padding:6px 10px;border-radius:999px;background:var(--soft);color:var(--green);font-size:13px;font-weight:800}
 .veg-card strong{display:block;font-size:30px;line-height:1.15;margin-bottom:10px;letter-spacing:.5px}
 .veg-card em{display:block;color:var(--green);font-style:normal;font-weight:900;font-size:18px}
 .veg-card small{display:block;margin-top:8px;color:#58735d;font-size:13px;font-weight:900;padding-right:10px}
-.veg-card:after{content:"→";position:absolute;right:16px;bottom:16px;display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;background:rgba(45,106,52,.10);color:var(--green);font-size:20px;font-weight:900}
+.veg-card:after{content:"→";position:absolute;right:14px;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(180deg,#2e6a34 0%,#234c2a 100%);color:#fff;font-size:22px;font-weight:900;box-shadow:0 8px 20px rgba(35,76,42,.16)}
 .empty-state{display:none;margin-top:18px;padding:18px;border-radius:18px;border:1px dashed var(--line);background:#fafcf9;color:var(--muted);font-weight:800;text-align:center}
 .footer-link{text-align:center;margin-top:30px}
 .footer-link a{display:inline-block;padding:14px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--green);text-decoration:none;font-weight:900}
 @media (max-width:860px){.search-row{grid-template-columns:1fr}}
-@media (max-width:680px){.wrap{padding:18px 14px 38px} .hero{border-radius:28px;padding:28px 18px 24px} .hero .brand{font-size:20px;line-height:1.35} .hero h1{font-size:clamp(50px,14vw,78px)} .cat-section{padding:18px;border-radius:24px} .cat-no{width:48px;height:48px;font-size:18px;border-radius:14px} .veg-card strong{font-size:24px} }
+@media (max-width:680px){.wrap{padding:18px 14px 38px} .hero{border-radius:28px;padding:28px 18px 24px} .hero .brand{font-size:20px;line-height:1.35} .hero h1{font-size:clamp(50px,14vw,78px)} .cat-section{padding:18px;border-radius:24px} .cat-no{width:48px;height:48px;font-size:18px;border-radius:14px} .veg-card{padding:18px 66px 18px 18px} .veg-card strong{font-size:24px} .veg-card:after{right:12px;width:38px;height:38px;border-radius:12px} }
 </style>
 </head>
 <body>
