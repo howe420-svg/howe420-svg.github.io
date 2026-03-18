@@ -20,47 +20,44 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,0) 28%);pointer-events:none}
 .hero-inner{position:relative;z-index:1;max-width:820px}
 .brand{margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.24);font-size:clamp(20px,2vw,28px);line-height:1.45;font-weight:800;letter-spacing:.2px}
-.hero-copy{display:grid;gap:18px;align-items:end}
-.hero h1{margin:0;max-width:10ch;font-size:clamp(54px,6.6vw,86px);line-height:1.02;letter-spacing:-0.02em;font-weight:900;text-wrap:balance}
-.hero-sub{margin:0;max-width:30em;color:rgba(255,255,255,.95);font-size:clamp(18px,1.85vw,23px);font-weight:600;line-height:1.78}
-.hero-points{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
-.hero-point{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px)}
-.hero-point strong{display:block;font-size:17px;line-height:1.2;margin-bottom:4px}
-.hero-point span{display:block;font-size:14px;line-height:1.55;color:rgba(255,255,255,.88)}
+.hero-copy{display:grid;gap:16px;align-items:start}
+.hero h1{margin:0;font-size:clamp(54px,6.4vw,86px);line-height:1.04;letter-spacing:-0.03em;font-weight:900}
+.hero h1 .line{display:block}
+.hero-sub{margin:0;max-width:31em;color:rgba(255,255,255,.95);font-size:clamp(18px,1.85vw,23px);font-weight:600;line-height:1.78}
 .grid{display:grid;grid-template-columns:1.04fr .96fr;gap:22px;margin-top:22px}
 .card{background:rgba(255,255,255,.88);backdrop-filter: blur(8px);border:1px solid rgba(216,226,212,.95);border-radius:30px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
 .kicker{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--soft);color:var(--green);font-size:14px;font-weight:900;margin-bottom:14px}
 .big-title,.section-title{margin:0 0 10px;font-size:clamp(30px,4vw,46px);line-height:1.18;font-weight:900}
 .lead{margin:0;color:var(--muted);font-size:clamp(18px,2vw,22px)}
 .action-grid{display:grid;gap:14px;margin-top:22px}
-.action{position:relative;display:flex;justify-content:center;align-items:center;min-height:92px;padding:18px 20px;border-radius:22px;background:linear-gradient(180deg,#eef5eb 0%,#e5efe1 100%);border:1px solid #c7d8c3;color:var(--green);text-decoration:none;font-size:clamp(22px,2.4vw,30px);font-weight:900;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
-.action:after{content:"→";position:absolute;right:20px;font-size:22px;opacity:.85}
+.action{position:relative;display:flex;justify-content:center;align-items:center;min-height:92px;padding:18px 56px 18px 20px;border-radius:22px;background:linear-gradient(180deg,#edf6e8 0%,#dcebd7 100%);border:1px solid #b8cfb4;color:var(--green);text-decoration:none;font-size:clamp(22px,2.4vw,30px);font-weight:900;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 8px 20px rgba(48,93,45,.08)}
+.action:after{content:"→";position:absolute;right:18px;display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;background:rgba(45,106,52,.10);font-size:22px;opacity:1}
 .image-card img{width:100%;display:block;border-radius:28px;object-fit:cover;box-shadow:0 16px 40px rgba(45,106,52,.10)}
 .image-card p{margin:14px 4px 0;color:var(--muted);font-size:18px;font-weight:700}
 .note-list{display:grid;gap:14px}
 .note-item{padding:16px 18px;border-radius:18px;background:#fafcf9;border:1px solid var(--line)}
 .note-item strong{display:block;color:var(--green);font-size:20px;margin-bottom:4px}
 .quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.quick-link{position:relative;display:block;padding:18px 20px 20px;border-radius:22px;background:#fff;border:1px solid var(--line);text-decoration:none;color:var(--text);min-height:148px;transition:transform .16s ease, box-shadow .16s ease}
-.quick-link:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(36,62,32,.07)}
+.quick-link{position:relative;display:block;padding:18px 58px 20px 20px;border-radius:22px;background:linear-gradient(180deg,#ffffff 0%,#f4f8f1 100%);border:1px solid #cbd8c7;text-decoration:none;color:var(--text);min-height:148px;transition:transform .16s ease, box-shadow .16s ease;background-clip:padding-box;box-shadow:0 10px 24px rgba(36,62,32,.05)}
+.quick-link:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(36,62,32,.09)}
 .quick-link span{display:block;color:var(--muted);font-size:14px;font-weight:800;margin-bottom:8px}
 .quick-link strong{display:block;font-size:30px;line-height:1.15;margin-bottom:10px;color:#193c22}
-.quick-link em{display:block;color:var(--green);font-style:normal;font-weight:800;font-size:16px;line-height:1.5;padding-right:28px}
-.quick-link:after{content:"→";position:absolute;right:20px;bottom:18px;color:var(--green);font-size:20px;font-weight:900}
+.quick-link em{display:block;color:var(--green);font-style:normal;font-weight:900;font-size:16px;line-height:1.5;padding-right:10px}
+.quick-link:after{content:"→";position:absolute;right:18px;bottom:18px;display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;background:rgba(45,106,52,.10);color:var(--green);font-size:20px;font-weight:900}
 .info-footer{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
-.info-chip{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.8);border:1px solid var(--line);color:var(--muted);font-size:15px;font-weight:800;text-align:center}
+.info-chip{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.88);border:1px solid var(--line);color:var(--muted);font-size:15px;font-weight:800;text-align:center}
 .footer-link{text-align:center;margin-top:26px}
 .footer-link a{display:inline-block;padding:14px 22px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--green);text-decoration:none;font-weight:900}
 @media (max-width:900px){
   .grid{grid-template-columns:1fr}
-  .quick-grid,.hero-points,.info-footer{grid-template-columns:1fr}
+  .quick-grid,.info-footer{grid-template-columns:1fr}
 }
 @media (max-width:680px){
   .wrap{padding:14px 14px 40px}
   .hero{border-radius:30px;padding:24px 20px 24px}
   .brand{font-size:17px;line-height:1.5;margin-bottom:14px;padding-bottom:10px}
   .hero-copy{gap:14px}
-  .hero h1{font-size:clamp(40px,10.5vw,56px);line-height:1.08;max-width:8.2ch;letter-spacing:-0.03em}
+  .hero h1{font-size:clamp(42px,10.2vw,58px);line-height:1.08;letter-spacing:-0.03em}
   .hero-sub{font-size:17px;max-width:100%;line-height:1.72}
   .hero-point{padding:12px 14px}
   .card{padding:20px;border-radius:24px}
@@ -77,14 +74,9 @@ body{margin:0;background:radial-gradient(circle at top left,#f8faf7 0,#f1f3ee 45
       <div class="hero-inner">
         <p class="brand">佳雨農場｜安心有機，日常好煮</p>
         <div class="hero-copy">
-          <h1>今天這包菜，這樣煮最好吃</h1>
+          <h1><span class="line">今天這包菜，</span><span class="line">這樣煮最好吃</span></h1>
           <p class="hero-sub">每一包佳雨農場的有機蔬菜，都幫你整理成實用料理建議。點進去就能快速找到做法、保存提醒與這包菜的特色。</p>
         </div>
-      </div>
-      <div class="hero-points">
-        <div class="hero-point"><strong>每包兩道建議</strong><span>常見做法＋第二道變化，晚餐更好決定。</span></div>
-        <div class="hero-point"><strong>保存方式一起看</strong><span>收到後怎麼冰、幾天內最好吃，一次整理。</span></div>
-        <div class="hero-point"><strong>快速找菜入口</strong><span>常見蔬菜、特色蔬菜、鮮甜萵苣，找菜更直覺。</span></div>
       </div>
     </section>
 
