@@ -1,1 +1,1 @@
-直接覆蓋網站上的 vegetables.html 與 about.html
+直接覆蓋網站上的 index.html、vegetables.html、about.html
