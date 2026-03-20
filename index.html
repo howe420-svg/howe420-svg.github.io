@@ -7,6 +7,7 @@
   <style>
     *{box-sizing:border-box}
     body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;background:#f4f4ef;color:#1f2d22;line-height:1.8}
+    img{max-width:100%;display:block}
     .wrap{width:min(100%,920px);margin:0 auto;padding:24px 18px 48px}
     .hero{background:linear-gradient(180deg,#4f9654 0%,#417f45 100%);color:#fff;border-radius:34px;padding:30px 22px 34px;box-shadow:0 12px 28px rgba(0,0,0,.08)}
     .kicker{margin:0 0 14px;font-size:15px;font-weight:700;letter-spacing:.4px;opacity:.96}
@@ -16,6 +17,9 @@
     .btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:800;font-size:16px;text-align:center}
     .btn-primary{background:#fff;color:#2f6f38}
     .btn-secondary{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.42)}
+    .hero-image-card{background:#fff;border:1px solid #dde3d8;border-radius:30px;padding:14px;margin-top:22px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    .hero-image-card img{border-radius:22px}
+    .hero-image-caption{margin:12px 6px 2px;color:#47624a;font-size:14px;font-weight:700}
     .section{background:#fff;border:1px solid #dde3d8;border-radius:30px;padding:26px 22px;margin-top:22px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
     .eyebrow{margin:0 0 10px;color:#3c7c43;font-size:14px;font-weight:800;letter-spacing:.3px}
     .section h2{margin:0 0 14px;font-size:28px;line-height:1.25;color:#1f2d22}
@@ -35,6 +39,7 @@
       .grid{grid-template-columns:repeat(2,1fr)}
       .section{padding:30px 28px}
       .section h2{font-size:34px}
+      .hero-image-card{padding:18px}
     }
   </style>
 </head>
@@ -48,6 +53,11 @@
         <a class="btn btn-primary" href="vegetables.html">查看料理建議總覽</a>
         <a class="btn btn-secondary" href="about.html">認識佳雨農場</a>
       </div>
+    </section>
+
+    <section class="hero-image-card">
+      <img src="homepage-hero-kitchen.jpeg" alt="佳雨農場料理示意圖">
+      <p class="hero-image-caption">從買回家，到端上桌，都更簡單、更安心。</p>
     </section>
 
     <section class="section">
