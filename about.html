@@ -1,41 +1,73 @@
-<!doctype html>
-<html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>認識佳雨農場｜佳雨農場</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>認識佳雨農場</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;background:#f4f4ef;color:#1f2d22;line-height:1.8}
+    .wrap{width:min(100%,920px);margin:0 auto;padding:24px 18px 48px}
+    .hero{background:linear-gradient(180deg,#3f8d4d 0%,#2f6f38 100%);color:#fff;border-radius:34px;padding:30px 22px 34px;box-shadow:0 12px 28px rgba(0,0,0,.08)}
+    .kicker{margin:0 0 14px;font-size:15px;font-weight:700;letter-spacing:.4px;opacity:.96}
+    .hero h1{margin:0 0 14px;font-size:42px;line-height:1.12;font-weight:800}
+    .hero p{margin:0;font-size:16px;font-weight:600;color:rgba(255,255,255,.96)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-block;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:800;font-size:16px;text-align:center}
+    .btn-primary{background:#fff;color:#2f6f38}
+    .btn-secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28)}
+    .section{background:#fff;border:1px solid #dde3d8;border-radius:30px;padding:26px 22px;margin-top:22px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    .eyebrow{margin:0 0 10px;color:#3c7c43;font-size:14px;font-weight:800;letter-spacing:.3px}
+    .section h2{margin:0 0 14px;font-size:28px;line-height:1.25;color:#1f2d22}
+    .section p{margin:0;font-size:16px;color:#2f3b31}
+    ul{margin:0;padding-left:1.2em}
+    li{margin:.18em 0;font-size:16px}
+    @media (min-width:700px){
+      .wrap{padding:28px 20px 56px}
+      .hero{padding:38px 30px 40px}
+      .hero h1{font-size:58px}
+      .hero p{font-size:18px;max-width:760px}
+      .section{padding:30px 28px}
+      .section h2{font-size:34px}
+    }
+  </style>
 </head>
 <body>
-<header class="topbar">
-  <div class="container">
-    <div class="brand">佳雨農場｜安心有機，日常好煮</div>
-    <h1>認識佳雨農場</h1>
-    <p class="subtitle">安心有機，日常好煮。</p>
-  </div>
-</header>
-<main>
-  <div class="container">
-    <a class="back" href="index.html">← 回首頁</a>
-    
-<div class="card">
-  <div class="kicker">認識佳雨農場</div>
-  <h2 class="section-title">我們在桃園，以溫室種植有機蔬菜</h2>
-  <p>我們希望不只把菜種好，也把買回家之後怎麼煮這件事講清楚。讓每一包菜都有對應的料理建議、保存方式與口感說明，讓你回到家之後，更容易煮，也更安心。</p>
-</div>
-<div class="card">
-  <div class="kicker">我們正在做的事</div>
-  <ul>
-    <li>把每一種葉菜建立成可查詢的料理頁</li>
-    <li>讓 QR code 一掃就能知道怎麼煮</li>
-    <li>讓蔬菜不只是買回家，而是真的被好好料理</li>
-  </ul>
-</div>
+  <div class="wrap">
+    <section class="hero">
+      <p class="kicker">佳雨農場｜安心有機，日常好煮</p>
+      <h1>認識佳雨農場</h1>
+      <p>把農場的用心，變成每天都能放心端上桌的味道。</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="index.html">回首頁</a>
+        <a class="btn btn-secondary" href="vegetables.html">查看料理建議</a>
+      </div>
+    </section>
 
+    <section class="section">
+      <p class="eyebrow">認識佳雨農場</p>
+      <h2>我們在桃園，以溫室種植有機蔬菜</h2>
+      <p>我們希望不只把菜種好，也把買回家之後怎麼煮這件事講清楚。讓每一包菜都有對應的料理建議、保存方式與口感說明，讓你回到家之後，更容易煮，也更安心。</p>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">我們正在做的事</p>
+      <ul>
+        <li>把每一種葉菜建立成可查詢的料理頁</li>
+        <li>讓 QR code 一掃就知道怎麼煮</li>
+        <li>讓蔬菜不只是買回家，而是真的被好好料理</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">農場網站定位</p>
+      <ul>
+        <li>掃碼後立即看到料理建議</li>
+        <li>快速知道保存方式</li>
+        <li>理解這包菜的特色</li>
+        <li>用乾淨、清楚的方式建立品牌信任</li>
+      </ul>
+    </section>
   </div>
-</main>
-<footer>
-  <div class="container">佳雨農場 QR 掃碼網站示意版</div>
-</footer>
 </body>
 </html>
