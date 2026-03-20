@@ -1,1 +1,1 @@
-直接覆蓋網站上的 index.html、vegetables.html、about.html
+這是完整蔬菜總覽恢復版。直接覆蓋網站上的 vegetables.html。
