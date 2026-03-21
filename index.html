@@ -17,10 +17,11 @@
     .btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:800;font-size:16px;text-align:center}
     .btn-primary{background:#fff;color:#2f6f38}
     .btn-secondary{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.42)}
-    .hero-image-card{background:#fff;border:1px solid #dde3d8;border-radius:30px;padding:14px;margin-top:22px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
-    .hero-image-card img{border-radius:22px}
-    .hero-image-caption{margin:12px 6px 2px;color:#47624a;font-size:14px;font-weight:700}
-    .section{background:#fff;border:1px solid #dde3d8;border-radius:30px;padding:26px 22px;margin-top:22px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    .image-card,.section{background:#fff;border:1px solid #dde3d8;border-radius:30px;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+    .image-card{padding:14px;margin-top:22px}
+    .image-card img{border-radius:22px}
+    .image-caption{margin:12px 6px 2px;color:#47624a;font-size:14px;font-weight:700}
+    .section{padding:26px 22px;margin-top:22px}
     .eyebrow{margin:0 0 10px;color:#3c7c43;font-size:14px;font-weight:800;letter-spacing:.3px}
     .section h2{margin:0 0 14px;font-size:28px;line-height:1.25;color:#1f2d22}
     .section p{margin:0;font-size:16px;color:#2f3b31}
@@ -29,17 +30,22 @@
     .card small{display:block;color:#7b877d;font-size:14px;font-weight:700;margin-bottom:8px}
     .card strong{display:block;font-size:20px;line-height:1.35;color:#26422b}
     .card span{display:inline-block;margin-top:10px;color:#3f8d4d;font-weight:800;font-size:15px}
+    .two-col{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
+    .info-box{background:#fafbf8;border:1px solid #dce3d8;border-radius:24px;padding:20px 18px}
+    .info-box h3{margin:0 0 12px;font-size:22px;color:#26422b}
     ul{margin:0;padding-left:1.2em}
-    li{margin:.18em 0;font-size:16px}
+    li{margin:.18em 0;font-size:16px;color:#2f3b31}
+    .footer-cta{margin-top:18px}
     @media (min-width:700px){
       .wrap{padding:28px 20px 56px}
       .hero{padding:38px 30px 40px}
       .hero h1{font-size:58px}
       .hero p{font-size:18px;max-width:760px}
-      .grid{grid-template-columns:repeat(2,1fr)}
       .section{padding:30px 28px}
       .section h2{font-size:34px}
-      .hero-image-card{padding:18px}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr 1fr}
+      .image-card{padding:18px}
     }
   </style>
 </head>
@@ -55,29 +61,46 @@
       </div>
     </section>
 
-    <section class="hero-image-card">
+    <section class="image-card">
       <img src="homepage-hero-kitchen.jpeg" alt="佳雨農場料理示意圖">
-      <p class="hero-image-caption">從買回家，到端上桌，都更簡單、更安心。</p>
+      <p class="image-caption">從買回家，到端上桌，都更簡單、更安心。</p>
     </section>
 
     <section class="section">
-      <p class="eyebrow">快速入口</p>
+      <p class="eyebrow">料理建議入口</p>
       <h2>今晚先從這裡開始</h2>
       <div class="grid">
         <a class="card" href="vegetables.html">
-          <div>
-            <small>全部蔬菜</small>
-            <strong>查看料理建議總覽</strong>
-          </div>
+          <div><small>全部蔬菜</small><strong>查看料理建議總覽</strong></div>
           <span>立即查看 →</span>
         </a>
         <a class="card" href="vegetables.html">
-          <div>
-            <small>常見葉菜</small>
-            <strong>先看最常煮、最好上手的菜色</strong>
-          </div>
+          <div><small>今晚晚餐</small><strong>先看最常煮、最好上手的菜色</strong></div>
           <span>快速進入 →</span>
         </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">一眼看懂</p>
+      <h2>這包菜的重點資訊</h2>
+      <div class="two-col">
+        <div class="info-box">
+          <h3>這包菜特色</h3>
+          <ul>
+            <li>安心有機</li>
+            <li>日常好煮</li>
+            <li>當季新鮮</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>保存方式</h3>
+          <ul>
+            <li>收到後先冷藏</li>
+            <li>不要先洗再冰</li>
+            <li>2～4 天內最好吃</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -85,16 +108,9 @@
       <p class="eyebrow">認識佳雨農場</p>
       <h2>安心有機，日常好煮</h2>
       <p>佳雨農場希望把農場的用心，變成你每天都能放心端上桌的味道。除了安心種植，也把每一包菜的料理方式與保存方式整理得更清楚，讓你買回家之後，更容易煮、也更願意常常吃菜。</p>
-    </section>
-
-    <section class="section">
-      <p class="eyebrow">農場網站定位</p>
-      <ul>
-        <li>掃碼後立即看到料理建議</li>
-        <li>快速知道保存方式</li>
-        <li>理解這包菜的特色</li>
-        <li>用乾淨、清楚的方式建立品牌信任</li>
-      </ul>
+      <div class="footer-cta">
+        <a class="btn btn-primary" href="about.html">認識佳雨農場</a>
+      </div>
     </section>
   </div>
 </body>
